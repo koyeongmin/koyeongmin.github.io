@@ -27,7 +27,9 @@ key: page-about
 ---
 
 Yeongmin Ko (고영민)
+
 Gwangju Institute of Science and Technology (GIST)
+
 Reseach Area : Autonomous Driving, Computer Vision
 
 ## Contact

@@ -19,6 +19,10 @@ $$
  + : V \times V \rightarrow V
 $$
 
+$$
+ \bullet :R \times V \rightarrow V
+$$
+
 <!--more-->
 
 ---

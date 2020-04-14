@@ -51,11 +51,24 @@ Vector들의 집합 $B = \{ v_1, ..., v_n \}$이 linearly independent하며 spac
 $$
  b'_i = \sum_{j=1}^{n}{\alpha_ji b_j}
 $$
+
 위의 세번째 성질에서 나타나는 coefficient $\alpha_ji$를 이용하여 basis transform을 나타내는 matrix A를 만들 수 있으며, $B' = BA \Leftrightarrow B=B'A^-1$이라고 할 수 있습니다.
 
 
 ## Inner Product
+Vector space에서는 다음과 같은 inner product라는 연산을 정의할 수 있습니다.
 
+$$
+ <\bullet, \bullet> : V \times V \rightarrow R
+$$
+
+이러한 inner product는 다음과 같은 세가지 성질을 갖습니다.
+
+- $<u, \alpha v + \beta w> = \alpha <u, v> + \beta <u, w>$ (linear)
+
+- $<u, v> = <v, u>$ (symmetric)
+
+- $<v, v> \geq 0 and <v, v> = 0 \Leftrightarrow v = 0 $ (positive definite)
 
 
 ## Kronecker Product and Stack of a Matrix

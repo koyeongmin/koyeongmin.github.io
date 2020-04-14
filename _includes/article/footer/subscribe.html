@@ -3,4 +3,13 @@
 {%- assign _paths_rss = __return -%}
 {%- include snippets/get-locale-string.html key='SUBSCRIBE' -%}
 {%- assign _locale_nav_subscribe = __return -%}
+
+<script src="https://utteranc.es/client.js"
+        repo="koyeongmin/blog_comment"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="{{ _paths_rss }}">{{ _locale_nav_subscribe }}</a></div>

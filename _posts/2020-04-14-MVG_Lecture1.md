@@ -14,7 +14,12 @@ Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 
 
 ## Vector Space
 어떤 set V가 다음과 같은 vector summation과 scalar multiplication에 대해 닫혀있을 때, set V를 linear space 또는 vector space (over the field R)이라고 합니다.
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+
+$$
+\lim_{x\to 0}{\frac{e^x-1}{2x}}
+\overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
+\lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
+$$
 
 
 <!--more-->

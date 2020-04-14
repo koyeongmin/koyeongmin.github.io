@@ -40,7 +40,23 @@ $$
 
 Vector들의 집합 $B = \{ v_1, ..., v_n \}$이 linearly independent하며 space V를 span할 수 있을 때 B를 space V의 basis라고 하며, basis는 linearly independent vector들의 최대 집합입니다.
 
+이러한 basis는 아래와 같은 성질을 가지고 있습니다.(아래에서 B와 B'은 linear space V의 basis들입니다.)
+
+- B와 B'은 같은 수의 원소(vector)를 포함하고 있으며, 이 숫자 n을 space V의 dimension(차원)이라고 합니다.
+
+- V에 속해있는 모든 vector v는 basis vector들(B에 속해있는 vector들)의 linear combination에 의해 unique하게 표현됩니다.(즉 basis vector들로 해당 vector v를 표현하는 방법은 한가지 뿐입니다.)
+
+- B의 모든 vector들은 또다른 basis인 $ b'_i \in B' $의 linear combination으로 다음과 같이 표현될 수 있습니다.
+
+$$
+ b'_i = \sum_{j=1}^{n}{\alpha_ji b_j}
+$$
+위의 세번째 성질에서 나타나는 coefficient $\alpha_ji$를 이용하여 basis transform을 나타내는 matrix A를 만들 수 있으며, $B' = BA \Leftrightarrow B=B'A^-1$이라고 할 수 있습니다.
+
+
 ## Inner Product
+
+
 
 ## Kronecker Product and Stack of a Matrix
 

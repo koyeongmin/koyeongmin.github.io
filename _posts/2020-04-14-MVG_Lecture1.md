@@ -25,7 +25,7 @@ $$
 
 이러한 vector space V의 subset인 W가 V와 마찬가지로 vector summation과 scalar multiplication에 대해 닫혀있으며 0을 포함하고 있을때 W를 subspace라고 합니다.
 
-##Linear Independence and Basis
+## Linear Independence and Basis
 Vector들의 집합 $S = \{ v_1, ... , v_k \} \subset V$에 의해 span 되는 subspace는 S에 속해있는 vector들로 구성할 수 있는 모든 linear combinations으로 이루어진 subspace를 의미하며, 다음과 같이 표현할 수 있습니다.
 
 $$
@@ -38,7 +38,7 @@ $$
  \sum_{i=1}^{k}{\alpha_i v_i} = 0 \rightarrow \alpha_i = 0 \forall i
 $$
 
-Vector들의 집합 $B = \{ v_1, ..., v_n \}$이 linearly independent하며 space V를 span할 수 있을 때 B를 space V의 basis라고 하며, basis는 linearly independent vector들의 최대 집합
+Vector들의 집합 $B = \{ v_1, ..., v_n \}$이 linearly independent하며 space V를 span할 수 있을 때 B를 space V의 basis라고 하며, basis는 linearly independent vector들의 최대 집합입니다.
 
 
 <!--more-->

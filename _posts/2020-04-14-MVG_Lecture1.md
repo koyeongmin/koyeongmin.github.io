@@ -64,11 +64,11 @@ $$
 
 이러한 inner product는 다음과 같은 세가지 성질을 갖습니다.
 
-- $\<u, \alpha v + \beta w> = \alpha <u, v> + \beta <u, w>$ (linear)
+- $\langle u, \alpha v + \beta w \rangle = \alpha \langle u, v \rangle + \beta \langle u, w \rangle$ (linear)
 
-- $<u, v> = <v, u>$ (symmetric)
+- $\langle u, v \rangle = \langle v, u \rangle$ (symmetric)
 
-- $<v, v>\, \geq 0 \, and <v, v> = 0 \Leftrightarrow v = 0 $ (positive definite)
+- $\langle v, v \rangle \geq 0 \, and \langle v, v \rangle = 0 \Leftrightarrow v = 0 $ (positive definite)
 
 
 ## Kronecker Product and Stack of a Matrix

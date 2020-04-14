@@ -1,14 +1,18 @@
 ---
-title: Multiview Geometry - Lecture 1 정리
+title: Multiple View Geometry - Lecture 1 정리
 tags: MVG
 ---
 
 
-해당 포스팅은 뮌헨 공과대학교(TU München)의 Prof. Dr. Daniel Cremers 께서 진행하신 multi view geometry 강의를 정리한 내용입니다.
+해당 포스팅은 뮌헨 공과대학교(TU München)의 Prof. Dr. Daniel Cremers 께서 진행하신 Multiple View Geometry 강의를 정리한 내용입니다.
+
+---
+
+Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 위한 수학적 배경(선형대수)에 대한 내용으로 이루어져 있습니다.
+
+Vector Space
 
 
 <!--more-->
 
 ---
-
-[![Star This Project]](https://github.com/koyeongmin/koyeongmin.github.io)

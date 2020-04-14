@@ -11,6 +11,7 @@ Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 
 
 [Video](https://www.youtube.com/watch?v=RDkwklFGMfo)
 
+[강의자료](https://drive.google.com/file/d/19vI3xbLeXcQuJz15UtwHp-YNsT5gZxEm/view?usp=sharing)
 
 ## Vector Space
 어떤 set V가 다음과 같은 vector summation과 scalar multiplication에 대해 닫혀있을 때, set V를 linear space 또는 vector space (over the field R)이라고 합니다.
@@ -84,6 +85,43 @@ $$
 
 이와 같이 space V에서 scalar product로 생성되는 metric을 Hilbert space라고 합니다.
 
+$V = R^n$에서 basis가 canonical basis $B = I_n$일 경우 아래와 같이 canonical inner product를 정의할 수 있습니다.(해당 강의에서는 $I_n$을 identity matrix(단위행렬)에서 대각성분들이 n인 행렬로 정의하고 있습니다.)
+
+$$
+ \langle x, y \rangle = x^T y = \sum_{i=1}^{n}{x_i y_j}
+$$
+
+또한 이로부터 L2-norm(또는 Euclidean norm)을 정의할 수 있습니다.
+
+$$
+ |x|_2 = sqrt{x^T x} = sqrt{x_1^2 + /cdot /cdot /cdot + x_n^2}
+$$
+
+그리고 위에서 정의했던 basis transform A를 이용하여 다른 coordinate에서의 cannonical inner product를 계산할 수 있습니다.
+
+Canonical basis B에서 B'사이의 basis transform가 A일때, $I=B' A^-1$이라고 할 수 있으며, 새로운 coordinate x', y'의 cannonical inner product는 다음과 같습니다.
+
+$$
+ \langle x, y \rangle = x^T y = (Ax')^T(Ay') = x'^T A^T A y' \equiv \langle x', y' \rangle_{A^T A}
+$$
+
+위의 식에서 두번째 term과 세번째 term 사이에 $x=Ax', y=Ay'$의 관계가 존재하는데 이 부분에 대한 설명이 강의자료에는 나와있지 않습니다.
+
+이 부분에 대해서는 다음과 같이 이해를 하면 좋을 것 같습니다.(2차원의 예시에 한정된 설명이지만 임의의 차원으로 확장시켜도 무리가 없을 것 같습니다.)
+
+어떤 point를 basis $B' = \{b'_1, b'_2\}$의 coordinate에서 바라본 좌표가 $x'=(\alpha', \beta')$이라고 하면, 이 point의 정확한 위치는 $\alpha' b'_1 + \beta' b'_2$라고 할 수 있고, 이를 정리하면 다음과 같습니다.
+
+$$
+ B' = 
+\begin{bmatrix}
+b'_1 & b'_2
+\end{bmatrix} 
+
+\alpha' b'_1 + \beta' b'_2 = B'
+\begin{pmatrix}
+\alpha' \\ \beta' 
+\end{pmatrix}
+$$
 
 
 ## Kronecker Product and Stack of a Matrix

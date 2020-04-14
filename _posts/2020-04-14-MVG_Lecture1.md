@@ -11,4 +11,4 @@ tags: Multiview Geometry
 
 ---
 
-[![Star This Project](https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?label=Stars&style=social)](https://github.com/koyeongmin/koyeongmin.github.io)
+[![Star This Project]](https://github.com/koyeongmin/koyeongmin.github.io)

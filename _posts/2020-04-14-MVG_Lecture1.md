@@ -18,9 +18,6 @@ Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 
 $$
 + : V \times V \rightarrow V
 $$
-$$
-+ : V \times V \rightarrow V
-$$
 
 <!--more-->
 

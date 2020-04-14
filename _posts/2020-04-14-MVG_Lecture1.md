@@ -16,7 +16,7 @@ Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 
 어떤 set V가 다음과 같은 vector summation과 scalar multiplication에 대해 닫혀있을 때, set V를 linear space 또는 vector space (over the field R)이라고 합니다.
 
 $$
-+ : V \times V \rightarrow V
+1+ : V \times V \rightarrow V
 $$
 
 <!--more-->

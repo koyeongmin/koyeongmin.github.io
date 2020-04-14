@@ -10,7 +10,10 @@ tags: MVG
 
 Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 위한 수학적 배경(선형대수)에 대한 내용으로 이루어져 있습니다.
 
-Vector Space
+
+## Vector Space
+어떤 set V가 다음과 같은 vector summation과 scalar multiplication에 대해 닫혀있을 때, set V를 linear space 또는 vector space (over the field R)이라고 합니다.
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
 
 
 <!--more-->

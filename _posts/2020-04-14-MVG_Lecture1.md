@@ -1,6 +1,6 @@
 ---
 title: Multiview Geometry - Lecture 1 정리
-tags: Multiview Geometry
+tags: MVG
 ---
 
 

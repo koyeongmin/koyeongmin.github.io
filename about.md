@@ -47,7 +47,7 @@ Reseach Area : Autonomous Driving, Computer Vision
 ## Education
 
 - 2013.03.01 ~ 2017.02.01 : Gwangju Institute of Science and Technology (GIST), EECS, Bachelor's degree
-- 2017.03.01 ~  : Gwangju Institute of Science and Technology (GIST), EECS, Integrated course for Master and PhD
+- 2017.03.01 ~  : Gwangju Institute of Science and Technology (GIST), EECS, Integrated course for Master and Ph.D.
 
 ## Publication
 

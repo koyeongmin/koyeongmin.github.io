@@ -9,6 +9,8 @@ tags: MVG
 
 Multiple View Geometry 과목의 첫번째 강의는 이후 내용의 이해를 위한 수학적 배경(선형대수)에 대한 내용으로 이루어져 있습니다.
 
+[Video](https://www.youtube.com/watch?v=RDkwklFGMfo)
+
 
 ## Vector Space
 어떤 set V가 다음과 같은 vector summation과 scalar multiplication에 대해 닫혀있을 때, set V를 linear space 또는 vector space (over the field R)이라고 합니다.
@@ -68,7 +70,20 @@ $$
 
 - $\langle u, v \rangle = \langle v, u \rangle$ (symmetric)
 
-- $\langle v, v \rangle \geq 0 \, and \langle v, v \rangle = 0 \Leftrightarrow v = 0 $ (positive definite)
+- $\langle v, v \rangle \geq 0 \; , and \; \langle v, v \rangle = 0 \Leftrightarrow v = 0 $ (positive definite)
+
+내적을 통해 다음과 같이 vector의 norm(vector의 길이를 계산)과 metric(두 vector간 거리를 계산)을 계산할 수도 있습니다.
+
+$$
+ | \cdot | : V \rightarrow R, \; |v| = \sqrt{\langle v, v \rangle} \; \; (norm)
+$$
+
+$$
+ d : V \times V \rightarrow R, \; d(v,w) = |v-w| = \sqrt{\langle v-w, v-w \rangle} \; \; (metric)
+$$
+
+이와 같이 space V에서 scalar product로 생성되는 metric을 Hilbert space라고 합니다.
+
 
 
 ## Kronecker Product and Stack of a Matrix

@@ -181,10 +181,8 @@ $$
 
 Linear transform은 두 linear space V, W 사이의 map $L : V \rightarrow W$로 정의되며, 다음과 같은 성질을 가지고 있어야 합니다.
 
-$$
-L(x+y) = L(x) + L(y) \;\;\; \forall x, y \in V \\
-L(\alpha x) = \alpha L(x) \;\;\; \forall x \in V, \alpha \in R
-$$
+- $L(x+y) = L(x) + L(y) \;\;\; \forall x, y \in V$
+- $L(\alpha x) = \alpha L(x) \;\;\; \forall x \in V, \alpha \in R$
 
 또한 space V에 적용되는 linear transform L은 V의 basis vector들로 정의 될 수 있으며, canonical basis $\{ e_1 , cdots, e_n \}$의 경우에는 다음과 같습니다.
 
@@ -195,7 +193,50 @@ $$
 
 이때 실수로 정의되는 모든 m x n matrix들은 $M(m,n)$으로 표시하며, m=n인 경우 $M(m,n) \equiv M(n)$으로 field R에서 ring(환)의 형태를 갖습니다.(ring에 대한 내용은 [link](https://freshrimpsushi.tistory.com/587) 참조하시면 좋을 것 같습니다.)
 
+
 ## The Linear Groups GL(n) and SL(n)
+
+여러가지 linear transformation 중 몇몇은 집합 G와 함께 group을 이루기도 합니다.
+
+group은 연산 $\circ : G \times G \rightarrow G$와 set G가 함께 구성하며, 다음과 같은 성질을 가지고 있어야 합니다.
+
+- closed: $g_1 /circ g_2 \in G \;\;\; \forall g_1, g_2 \in G$
+- assoc: $(g_1 \circ g_2) \circ g_3 = g_1 \circ (g_2 \circ g_3) \;\;\; \forall g_1, g_2, g_3 \in G$
+- neutral: $\exists e \in G: e \circ g = g \circ e = g \;\;\; \forall g \in G$
+- invers: $\exists g^{-1} \in G: g \circ g^{-1} = g^{-1} \circ g = e \;\;\; \forall g \in G$
+
+이러한 정의에 몇가지 특성을 추가하여 다음과 같은 group들을 정의할 수도 있습니다.
+
+- 모든 invertible(non-singular) real n x n matrix들은 matrix multiplication과 함께 group을 이루며, 이러한 group을 general linear group(일반선형군) GL(n)이라고 합니다. 즉 GL(n)은 $det(a) \neq 0$인 모든 $A \in M(n)$을 포함하고 있습니다.
+
+- 이러한 $A \in GL(n)$ 중 det(a) = 1 인 matrix들이 이루고 있는 group을 special linear group(특수선형군) SL(n)이라고 합니다.
+
+또한 어떤 group G와 GL(n) 사이에 injective(단사) transformation, $R:G \rightarrow GL(n)$이 존재할 경우 G는 matrix representation을 가지고 있다고 하며, 다음과 같은 연산도 가능합니다.
+
+$$
+R(e) = I_{n \times n} \;\;\;\;\;\; R(g \circ h) = R(g)R(h) \;\;\; \forall g,h \in G
+$$
+
+이때, map R을 group homomorhphism이라고도 합니다.
+
+이러한 matrix representation은 추상적인 group을 분석할 때 이에 해당하는 matrix group의 성질을 살핌으로써 좀 더 직관적인 분석이 가능하도록 합니다.
+
+예를 들어 어떤 객체의 회전에 대한 group의 경우 neutral element는 회전이 없는 변환, inverse는 역회전, 여러 matrix의 곱은 회전의 반복 등에 대응합니다.
+
+이제 몇가지 자주 등장하는 group을 살펴봅시다.
+
+- The Affine Group A(n)
+
+
+
+- The Orthogonal Group O(n)
+
+
+
+- The Euclidean Group E(n)
+
+
+
 
 ## Matrix Representation of Groups
 

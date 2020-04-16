@@ -38,7 +38,7 @@ $$
 또한 set S가 다음을 만족하면 linearly independent하다고 하며, 이는 S에 속해있는 어떤 vector v를 나머지 다른 vector들의 linear combination으로 나타낼 수 없다는 의미이다.
 
 $$
- \sum_{i=1}^{k}{\alpha_i v_i} = 0 \rightarrow \alpha_i = 0 \forall i
+ \sum_{i=1}^{k}{\alpha_i v_i} = 0 \rightarrow \alpha_i = 0 \;\; \forall i
 $$
 
 Vector들의 집합 $B = \{ v_1, ..., v_n \}$이 linearly independent하며 space V를 span할 수 있을 때 B를 space V의 basis라고 하며, basis는 linearly independent vector들의 최대 집합입니다.
@@ -55,14 +55,14 @@ $$
  b'_i = \sum_{j=1}^{n}{\alpha_{ji} b_j}
 $$
 
-위의 세번째 성질에서 나타나는 coefficient $\alpha_{ji}$를 이용하여 basis transform을 나타내는 matrix A를 만들 수 있으며, $B' = BA \Leftrightarrow B=B'A^-1$이라고 할 수 있습니다.
+위의 세번째 성질에서 나타나는 coefficient $\alpha_{ji}$를 이용하여 basis transform을 나타내는 matrix A를 만들 수 있으며, $B' = BA \Leftrightarrow B=B'A^{-1}$이라고 할 수 있습니다.
 
 
 ## Inner Product
 Vector space에서는 다음과 같은 inner product라는 연산을 정의할 수 있습니다.
 
 $$
- <\cdot, \cdot> : V \times V \rightarrow R
+ \langle \cdot, \cdot \rangle : V \times V \rightarrow R
 $$
 
 이러한 inner product는 다음과 같은 세가지 성질을 갖습니다.
@@ -94,7 +94,7 @@ $$
 또한 이로부터 L2-norm(또는 Euclidean norm)을 정의할 수 있습니다.
 
 $$
- |x|_2 = sqrt{x^T x} = sqrt{x_1^2 + /cdot /cdot /cdot + x_n^2}
+ |x|_2 = \sqrt{x^T x} = \sqrt{x_1^2 + \cdot \cdot \cdot + x_n^2}
 $$
 
 그리고 위에서 정의했던 basis transform A를 이용하여 다른 coordinate에서의 cannonical inner product를 계산할 수 있습니다.
@@ -109,18 +109,39 @@ $$
 
 이 부분에 대해서는 다음과 같이 이해를 하면 좋을 것 같습니다.(2차원의 예시에 한정된 설명이지만 임의의 차원으로 확장시켜도 무리가 없을 것 같습니다.)
 
-어떤 point를 basis $B' = \{b'_1, b'_2\}$의 coordinate에서 바라본 좌표가 $x'=(\alpha', \beta')$이라고 하면, 이 point의 정확한 위치는 $\alpha' b'_1 + \beta' b'_2$라고 할 수 있고, 이를 정리하면 다음과 같습니다.
+---
+
+어떤 point를 basis $B' = \{b'_1, b'_2\}$의 coordinate에서 바라본 좌표가 $x'=(\alpha', \beta')^T$이라고 하면, 이 point의 정확한 위치는 $\alpha' b'_1 + \beta' b'_2$라고 할 수 있고, 이를 정리하면 다음과 같습니다.
 
 $$
  B' = 
 \begin{bmatrix}
 b'_1 & b'_2
 \end{bmatrix} 
+$$
 
+$$
 \alpha' b'_1 + \beta' b'_2 = B'
 \begin{pmatrix}
 \alpha' \\ \beta' 
-\end{pmatrix}
+\end{pmatrix} = B'x'
+$$
+
+이때, $B' = BA$이므로 위의 수식은 다음과 같이 정리될 수 있습니다.
+
+$$
+B'x'= BAx'
+$$
+
+만약 해당 point를 B의 coordinate에서 보았을 때, 해당 point의 위치는 $Bx$의 형태로 나타날 것으므로 위의 식에서 $Ax'$ 부분이 x에 해당함을 알 수 있습니다.
+
+즉, basis transform matrix가 주어졌을 때, 이를 주어진 vector에 곱함으로써 다른 좌표계에서의 해당 vector의 좌표값을 얻을 수 있습니다.
+
+---
+
+추가적으로 내적을 이용하여 두 vector의 orthogonal(직교)를 다음과 같이 정의할 수 있습니다.
+$$
+\langle v, w \rangle = 0
 $$
 
 

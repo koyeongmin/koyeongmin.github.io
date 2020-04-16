@@ -323,7 +323,7 @@ $$
 rank(A) = dim(range(A))
 $$
 
-Matrix $A \in R^{m \time n}$의 rank는 다음과 같은 성질을 갖습니다.
+Matrix $A \in R^{m \times n}$의 rank는 다음과 같은 성질을 갖습니다.
 
 - $rank(A) = n - dim(ker(A))$
 
@@ -333,13 +333,15 @@ Matrix $A \in R^{m \time n}$의 rank는 다음과 같은 성질을 갖습니다.
 
 - rank(A)는 A의 minor 중 0이 아닌 것들의 hightest order와 같으며, 여기서 minor of order k는 A의 k x k submatrix의 determinant입니다.
 
-- Sylvester's inequality: $B \in R^{n \times k}$일때 $AB \in R^{m \times k}$이며, $rank(A) + rank(B) -n \leq rank(AB) \leq min(rank(A), rank(B))$입니다.
+- Sylvester's inequality: $B \in R^{n \times k}$일때 $AB \in R^{m \times k}$이며, $rank(A) + rank(B) -n \leq rank(AB) \leq min(rank(A), rank(B))$
 
-- 모든 nonsigular matrix $C \in R^{m \times m}$, $D \in R^{n \times n}$에 대해 $rank(A) = rank(CAD)$입니다.
+- 모든 nonsigular matrix $C \in R^{m \times m}$, $D \in R^{n \times n}$에 대해 $rank(A) = rank(CAD)$
 
 
 
 ## Eigenvalues and Eigenvectors
+
+
 
 ## Symmetric Matrices
 

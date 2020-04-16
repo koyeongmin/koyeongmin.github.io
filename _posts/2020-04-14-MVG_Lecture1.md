@@ -225,7 +225,7 @@ $$
 
 다음은 몇가지 자주 등장하는 group에 대한 설명입니다.
 
-### The Affine Group A(n)
+#### The Affine Group A(n)
 
 Affine transformation $L: R^n \rightarrow R^n$은 matrix $A \in GL(n)$과 vector $b \in R^n$에 의해 다음과 같이 정의됩니다.
 
@@ -263,7 +263,7 @@ A&b\\
 \end{pmatrix}$를 affine matrix라고 하며, 이는 GL(n+1)에 속하고, 이러한 affine matrix들의 집합은 GL(n+1)의 subgroup입니다.
 
 
-### The Orthogonal Group O(n)
+#### The Orthogonal Group O(n)
 
 Matrix $A \in M(n)$이 다음과 같이 inner product를 보존하는 경우 orthogonal 하다고 합니다.
 
@@ -284,8 +284,26 @@ $$
 
 #### The Euclidean Group E(n)
 
+Euclidean transformation은 다음과 같이 orthogonal matrix와 vector로 정의 됩니다.
 
+$$
+L: R^n \rightarrow R^n \;\;\;\;\;\; x \rightarrow Rx + T
+$$
 
+이러한 transformation의 집합을 Eculidean group E(n)이라고 하며, 이는 affine group A(n)의 subgroup입니다.
+
+Eucliean transformation을 homogeneous coordinates로 나타내면 다음과 같습니다.
+
+$$
+E(n) = \left\{ 
+\begin{pmatrix}
+R&T\\ 
+0&1
+\end{pmatrix} | R \in O(n), T \in R^n
+\right\}
+$$
+
+이때 $R \in SO(n)$이면 special Euclidean group SE(n)이라고 하고, 특히 SE(3)은 rigid-body motion을 나타낸다.
 
 
 ## Matrix Representation of Groups

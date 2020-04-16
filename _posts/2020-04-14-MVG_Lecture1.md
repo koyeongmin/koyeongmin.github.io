@@ -265,6 +265,21 @@ A&b\\
 
 - The Orthogonal Group O(n)
 
+Matrix $A \in M(n)$이 다음과 같이 inner product를 보존하는 경우 orthogonal 하다고 합니다.
+
+$$
+\langle Ax, Ay \rangle = \langle x, y \rangle \;\;\; \forall x, y \in R^n
+$$
+
+모든 orthogonal matrix들의 set은 othogonal group O(n)를 이루며, 이는 GL(n)의 subgroup입니다.
+
+Othogonal matrix R을 cononical inner product에 적용할 경우 $\langle Rx, Ry \rangle = x^T R^T R y = x^T y \;\;\; \forall x,y \in R^n$가 되어야 하므로 $R^T R = R R^T = I$라는 결론이 나오며, 이를 이용하면 O(n)을 다음과 같이 정의할 수도 있습니다.
+
+$$
+O(n) = \{ R \in GL(n) | R^t R = I \}
+$$
+
+이로부터 $det(R) \in \{ \pm 1 \}$을 만족할 경우 $det(R^T R) = (det(R))^2 = det(I) = 1$을 유추할 수 있고, O(n)의 subgroup이 $det(R) \in \{ \pm 1 \}$를 만족할 경우 이 subgroup을 special orthogonal group SO(n)이라고 하며, $SO(n) = O(n) \cap SL(n)$ 입니다.(특히 SO(3)은 3차원에서의 모든 회전 변환 matrix의 group입니다.)
 
 
 - The Euclidean Group E(n)

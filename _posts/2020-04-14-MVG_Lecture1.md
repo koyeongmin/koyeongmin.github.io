@@ -140,12 +140,25 @@ $$
 ---
 
 추가적으로 내적을 이용하여 두 vector의 orthogonal(직교)를 다음과 같이 정의할 수 있습니다.
+
 $$
 \langle v, w \rangle = 0
 $$
 
 
 ## Kronecker Product and Stack of a Matrix
+
+두 matrix $A \in R^(m \times n)$과 $A \in R^(k \times l)$이 주어졌을때 이들의 Kronecker product를 다음과 같이 정의할 수 있습니다.
+
+$$
+A \otimes B \equiv 
+\begin{pmatrix}
+a_{11}B & \cdots & a_{1n}B\\ 
+\vdots & \ddots & \vdots\\ 
+a_{m1}B & \cdots & a_{mn}B 
+\end{pmatrix}
+\in R^{mk \tims nl}
+$$
 
 ## Linear Transformations and Matrices
 

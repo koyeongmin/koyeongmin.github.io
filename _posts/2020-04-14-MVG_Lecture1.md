@@ -179,13 +179,21 @@ $$
 
 ## Linear Transformations and Matrices
 
-Linear transform은 두 linear space V, W 사이의 map $L : V \rightarrow W$로 정의되며, 다음과 같은 성질을 가지고 있어야 한다.
+Linear transform은 두 linear space V, W 사이의 map $L : V \rightarrow W$로 정의되며, 다음과 같은 성질을 가지고 있어야 합니다.
 
 $$
 L(x+y) = L(x) + L(y) \;\;\; \forall x, y \in V \\
 L(\alpha x) = \alpha L(x) \;\;\; \forall x \in V, \alpha \in R
 $$
 
+또한 space V에 적용되는 linear transform L은 V의 basis vector들로 정의 될 수 있으며, canonical basis $\{ e_1 , cdots, e_n \}$의 경우에는 다음과 같습니다.
+
+$$
+L(x) = Ax \;\;\; \forall x \in V \\
+A = (L(e_1), \cdots , L(e_n)) \in R^(m \times n)
+$$
+
+이때 실수로 정의되는 모든 m x n matrix들은 $M(m,n)$으로 표시하며, m=n인 경우 $M(m,n) \equiv M(n)$으로 field R에서 ring(환)의 형태를 갖습니다.(ring에 대한 내용은 [link](https://freshrimpsushi.tistory.com/587) 참조하시면 좋을 것 같습니다.)
 
 ## The Linear Groups GL(n) and SL(n)
 

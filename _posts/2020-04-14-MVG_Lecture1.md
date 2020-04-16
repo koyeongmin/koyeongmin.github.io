@@ -225,7 +225,7 @@ $$
 
 다음은 몇가지 자주 등장하는 group에 대한 설명입니다.
 
-- The Affine Group A(n)
+### The Affine Group A(n)
 
 Affine transformation $L: R^n \rightarrow R^n$은 matrix $A \in GL(n)$과 vector $b \in R^n$에 의해 다음과 같이 정의됩니다.
 
@@ -263,7 +263,7 @@ A&b\\
 \end{pmatrix}$를 affine matrix라고 하며, 이는 GL(n+1)에 속하고, 이러한 affine matrix들의 집합은 GL(n+1)의 subgroup입니다.
 
 
-- The Orthogonal Group O(n)
+### The Orthogonal Group O(n)
 
 Matrix $A \in M(n)$이 다음과 같이 inner product를 보존하는 경우 orthogonal 하다고 합니다.
 
@@ -282,7 +282,8 @@ $$
 이로부터 $det(R) \in \{ \pm 1 \}$을 만족할 경우 $det(R^T R) = (det(R))^2 = det(I) = 1$을 유추할 수 있고, O(n)의 subgroup이 $det(R) \in \{ \pm 1 \}$를 만족할 경우 이 subgroup을 special orthogonal group SO(n)이라고 하며, $SO(n) = O(n) \cap SL(n)$ 입니다.(특히 SO(3)은 3차원에서의 모든 회전 변환 matrix의 group입니다.)
 
 
-- The Euclidean Group E(n)
+#### The Euclidean Group E(n)
+
 
 
 

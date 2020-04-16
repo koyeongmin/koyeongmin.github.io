@@ -191,7 +191,7 @@ L(x) = Ax \;\;\; \forall x \in V \\
 A = (L(e_1), \cdots , L(e_n)) \in R^(m \times n)
 $$
 
-이때 실수로 정의되는 모든 m x n matrix들은 $M(m,n)$으로 표시하며, m=n인 경우 $M(m,n) \equiv M(n)$으로 field R에서 ring(환)의 형태를 갖습니다.(ring에 대한 내용은 [link](https://freshrimpsushi.tistory.com/587) 참조하시면 좋을 것 같습니다.)
+이때 실수로 정의되는 모든 m x n matrix들은 $M(m,n)$으로 표시하며, m=n인 경우 $M(m,n) \equiv M(n)$으로 field R에서 ring(환)의 형태를 갖습니다.(ring에 대한 내용은 [link](https://freshrimpsushi.tistory.com/587)를 참조하시면 좋을 것 같습니다.)
 
 
 ## The Linear Groups GL(n) and SL(n)
@@ -200,7 +200,7 @@ $$
 
 group은 연산 $\circ : G \times G \rightarrow G$와 set G가 함께 구성하며, 다음과 같은 성질을 가지고 있어야 합니다.
 
-- closed: $g_1 /circ g_2 \in G \;\;\; \forall g_1, g_2 \in G$
+- closed: $g_1 \circ g_2 \in G \;\;\; \forall g_1, g_2 \in G$
 - assoc: $(g_1 \circ g_2) \circ g_3 = g_1 \circ (g_2 \circ g_3) \;\;\; \forall g_1, g_2, g_3 \in G$
 - neutral: $\exists e \in G: e \circ g = g \circ e = g \;\;\; \forall g \in G$
 - invers: $\exists g^{-1} \in G: g \circ g^{-1} = g^{-1} \circ g = e \;\;\; \forall g \in G$
@@ -223,10 +223,44 @@ $$
 
 예를 들어 어떤 객체의 회전에 대한 group의 경우 neutral element는 회전이 없는 변환, inverse는 역회전, 여러 matrix의 곱은 회전의 반복 등에 대응합니다.
 
-이제 몇가지 자주 등장하는 group을 살펴봅시다.
+다음은 몇가지 자주 등장하는 group에 대한 설명입니다.
 
 - The Affine Group A(n)
 
+Affine transformation $L: R^n \rightarrow R^n$은 matrix $A \in GL(n)$과 vector $b \in R^n$에 의해 다음과 같이 정의됩니다.
+
+$$
+L(x) = Ax + b
+$$
+
+이와 같은 affine transformation의 set을 affine group of dimentsion n이라고 하며, A(n)으로 나타냅니다.
+
+위의 정의된 식에 따르면 b=0이 아닌 이상 L은 linear하지 않지만 $x \n R^n$을 $
+\begin{pmatrix}
+x\\ 
+1
+\end{pmatrix} \in R^{n+1}$과 같이 나타내는 homogeneous coordinates를 사용하면 다음과 같이 linear mapping으로 표현할 수 있습니다.
+
+$$
+L: R^{n+1} \rightarrow R^{n+1} \;\;\;\;\;\; 
+\begin{pmatrix}
+x\\ 
+1
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+A&b\\ 
+0&1
+\end{pmatrix}
+\begin{pmatrix}
+x\\ 
+1
+\end{pmatrix}
+$$
+
+이때 A와 b로 이루어진 matrix $\begin{pmatrix}
+A&b\\ 
+0&1
+\end{pmatrix}$를 affine matrix라고 하며, 이는 GL(n+1)에 속하고, 이러한 affine matrix들의 집합은 GL(n+1)의 subgroup입니다.
 
 
 - The Orthogonal Group O(n)

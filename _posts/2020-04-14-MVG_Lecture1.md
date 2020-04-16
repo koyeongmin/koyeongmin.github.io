@@ -157,7 +157,24 @@ a_{11}B & \cdots & a_{1n}B\\
 \vdots & \ddots & \vdots\\ 
 a_{m1}B & \cdots & a_{mn}B 
 \end{pmatrix}
-\in R^{mk \tims nl}
+\in R^{mk \times nl}
+$$
+
+또한 주어진 $A \in R^(m \times n)$의 stack $A^s$는 다음과 같이 A에 속해있는 n개의 column vector들을 쌓은 것으로 정의할 수 있습니다.
+
+$$
+A^s \equiv 
+\begin{pmatrix}
+a_1\\ 
+\vdots\\ 
+a_n
+\end{pmatrix} \in R^{mn}
+$$
+
+위의 두 notation을 통해 아래와 같이 기존의 식으로 새롭게 표현할 수 있습니다.
+
+$$
+u^TAv = (v \otimes u )^T A^s
 $$
 
 ## Linear Transformations and Matrices

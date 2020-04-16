@@ -160,7 +160,7 @@ a_{m1}B & \cdots & a_{mn}B
 \in R^{mk \times nl}
 $$
 
-또한 주어진 $A \in R^(m \times n)$의 stack $A^s$는 다음과 같이 A에 속해있는 n개의 column vector들을 쌓은 것으로 정의할 수 있습니다.
+또한 주어진 $A \in R^{m \times n}$의 stack $A^s$는 다음과 같이 A에 속해있는 n개의 column vector들을 쌓은 것으로 정의할 수 있습니다.
 
 $$
 A^s \equiv 
@@ -235,7 +235,7 @@ $$
 
 이와 같은 affine transformation의 set을 affine group of dimentsion n이라고 하며, A(n)으로 나타냅니다.
 
-위의 정의된 식에 따르면 b=0이 아닌 이상 L은 linear하지 않지만 $x \n R^n$을 $
+위의 정의된 식에 따르면 b=0이 아닌 이상 L은 linear하지 않지만 $x \in R^n$을 $
 \begin{pmatrix}
 x\\ 
 1
@@ -257,10 +257,7 @@ x\\
 \end{pmatrix}
 $$
 
-이때 A와 b로 이루어진 matrix $\begin{pmatrix}
-A&b\\ 
-0&1
-\end{pmatrix}$를 affine matrix라고 하며, 이는 GL(n+1)에 속하고, 이러한 affine matrix들의 집합은 GL(n+1)의 subgroup입니다.
+이때 A와 b로 이루어진 matrix를 affine matrix라고 하며, 이는 GL(n+1)에 속하고, 이러한 affine matrix들의 집합은 GL(n+1)의 subgroup입니다.
 
 
 #### The Orthogonal Group O(n)
@@ -306,9 +303,41 @@ $$
 이때 $R \in SO(n)$이면 special Euclidean group SE(n)이라고 하고, 특히 SE(3)은 rigid-body motion을 나타낸다.
 
 
-## Matrix Representation of Groups
+## Range, Span, Null Space and Kernel, and Rank
 
-## Range, Span, Null Space and Kernel
+$A \in R^{m \times n}$을 $R^n$에서 $R^m$으로의 linear map을 정의하는 matrix라고 할 때, A의 range 또는 span은 A에 의해 변환되어 도달할 수 있는 $R^m$의 subspace로 정의되며, 즉, matrix A의 range는 A의 column vector들의 span이라고 할 수 있고, 다음과 같이 나타낼 수 있습니다.
+
+$$
+range(A) = \{ y \in R^m | \exists x \in R^n : Ax = y \}
+$$
+
+Matrix A의 null space 또는 kernel은 A에 의해 0으로 mapping되는 vector들의 집합이며, 즉, A의 row vector들에 orthogonal한 vector의 집합이고, 다음과 같이 나타낼 수 있습니다.
+
+$$
+null(A) \equiv ker(A) = \{ x \in R^n | Ax = 0 \}
+$$
+
+Matrix A의 rank는 range의 dimension입니다.
+
+$$
+rank(A) = dim(range(A))
+$$
+
+Matrix $A \in R^{m \time n}$의 rank는 다음과 같은 성질을 갖습니다.
+
+- $rank(A) = n - dim(ker(A))$
+
+- $0 \leq rank(A) \leq min(m,n)$
+
+- $rank(A)$는 A의 row vector 중 서로 linearly independent한 vector들의 최대 갯수와 같습니다.
+
+- rank(A)는 A의 minor 중 0이 아닌 것들의 hightest order와 같으며, 여기서 minor of order k는 A의 k x k submatrix의 determinant입니다.
+
+- Sylvester's inequality: $B \in R^{n \times k}$일때 $AB \in R^{m \times k}$이며, $rank(A) + rank(B) -n \leq rank(AB) \leq min(rank(A), rank(B))$입니다.
+
+- 모든 nonsigular matrix $C \in R^{m \times m}$, $D \in R^{n \times n}$에 대해 $rank(A) = rank(CAD)$입니다.
+
+
 
 ## Eigenvalues and Eigenvectors
 

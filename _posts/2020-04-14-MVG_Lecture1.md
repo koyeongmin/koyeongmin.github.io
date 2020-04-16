@@ -111,7 +111,7 @@ $$
 
 ---
 
-어떤 point를 basis $B' = \{b'_1, b'_2\}$의 coordinate에서 바라본 좌표가 $x'=(\alpha', \beta')^T$이라고 하면, 이 point의 정확한 위치는 $\alpha' b'_1 + \beta' b'_2$라고 할 수 있고, 이를 정리하면 다음과 같습니다.
+어떤 point를 basis $B' = \{ b'_1, b'_2 \}$의 coordinate에서 바라본 좌표가 $x'=(\alpha', \beta')^T$이라고 하면, 이 point의 정확한 위치는 $\alpha' b'_1 + \beta' b'_2$라고 할 수 있고, 이를 정리하면 다음과 같습니다.
 
 $$
  B' = 
@@ -178,6 +178,14 @@ u^TAv = (v \otimes u )^T A^s
 $$
 
 ## Linear Transformations and Matrices
+
+Linear transform은 두 linear space V, W 사이의 map $L : V \rightarrow W$로 정의되며, 다음과 같은 성질을 가지고 있어야 한다.
+
+$$
+L(x+y) = L(x) + L(y) \;\;\; \forall x, y \in V \\
+L(\alpha x) = \alpha L(x) \;\;\; \forall x \in V, \alpha \in R
+$$
+
 
 ## The Linear Groups GL(n) and SL(n)
 

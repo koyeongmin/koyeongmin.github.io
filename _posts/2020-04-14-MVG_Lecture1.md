@@ -382,11 +382,32 @@ $S \in R^{n \times n}$가 real symmetric matrix라고 하면 다음의 성질을
 
 - 모든 eigenvalue가 positive(nonnegative)라면 S는 positive (semi-)definite입니다.
 
-- S가 positive semi-definite이고, $\lambda_1, \lambda_n$이 각각 최대, 최소의 eigenvalue라면, $\lambda_1 = max_{|x|=1}\langle x, Sx \rangle, \;\;\; \lambda_n = min_{|x|=1}\langle x, Sx \rangle$
-
+- S가 positive semi-definite이고, $\lambda_1, \lambda_n$이 각각 최대, 최소의 eigenvalue라면, $\lambda_1 = \max_{|x|=1}{\langle x, Sx \rangle}, \;\;\; \lambda_n = \min_{|x|=1}{\langle x, Sx \rangle}$
 
 
 ## Norms of Matrices
+
+어떤 matrix $A \in R^{m \times n}$의 norm을 정의하는 방법은 여러가지가 있지만 대표적인 방법으로 2가지 정도를 생각해 볼 수 있습니다.
+
+첫번째로 induced 2-norm의 경우 다음과 같이 정의됩니다.
+
+$$
+\parallel A \parallel_2 \equiv \max_{|x|_2 = 1}{|Ax|_2} = \max_{|x|_2 = 1}{\sqrt{\langle x, A^T A x \rangle}}
+$$
+
+다음으로 Frobenius norm은 다음과 같이 정의됩니다.
+
+$$
+\parallel A \parallel_f \equiv \sqrt{\sum_{i, j}{A^2_{ij}}} = \sqrt{trace(A^T A)}
+$$
+
+일반적으로는 위의 두 norm이 서로 같지 않음에 주의하여야 합니다.
+
+또한 $A^T A$는 symmetric, positive semi-definite하기 때문에 $A^T A = V diag(\sigma^2_1, \cdots, \sigma^2_n) V^T, \;\;\; \sigma^2_1 \geq \sigma^2_n \geq 0 $이며, 다음을 유추할 수 있습니다.
+
+$$
+\parallel A \parallel_2 = \sigma_1 \;\;\;\;\;\; \parallel A \parallel_f = \sqrt{trace(A^T A)} = \sqrt{ \sigma^2_1 + \cdots + \sigma^2_n}
+$$
 
 ## Skew-symmetric Matrices
 

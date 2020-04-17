@@ -341,30 +341,48 @@ Matrix $A \in R^{m \times n}$의 rank는 다음과 같은 성질을 갖습니다
 
 ## Eigenvalues and Eigenvectors
 
-$A \in C^{n \times n}$이 complex matrix라고 할 때, 다음을 만족하는 0이 아닌 vector $v \in C^n$을 A의 (right) eigenvector라고 하며, $\gamma$를 A의 eigenvalue라고 합니다.
+$A \in C^{n \times n}$이 complex matrix라고 할 때, 다음을 만족하는 0이 아닌 vector $v \in C^n$을 A의 (right) eigenvector라고 하며, $\lambda$를 A의 eigenvalue라고 합니다.
 
 $$
-Av = \gamma v \;\;\;\;\;\; with  \gamma \in C
+Av = \lambda v \;\;\;\;\;\; with \;\; \lambda \in C
 $$
 
-이와 비슷하게 $v^T A = \gamma v^T$를 만족하는 v를 A의 left eigenvector라고 하기도 하며, matrix A의 모든 eigenvalue들의 집합을 spectrum $\sigma (A)$라고 합니다.
+이와 비슷하게 $v^T A = \lambda v^T$를 만족하는 v를 A의 left eigenvector라고 하기도 하며, matrix A의 모든 eigenvalue들의 집합을 spectrum $\sigma (A)$라고 합니다.
 
 또한 D가 matrix A의 eigenvalue들을 포함하는 diagonal matrix(대각행렬)이고, V가 각 eigenvalue에 대응하는 eigenvector를 column으로 가지고 있는 matrix라고 할 때, 위의 정의로부터 AV=VD 가 만족함을 유추할 수 있습니다.
 
 그리고 $A \in R^{n \times n}$인 square matrix일 경우 다음과 같은 성질을 갖습니다.
 
-- $Av = \gamma v$인 $\gamma \in R$이 존재할 경우, left-eigenvector $\eta \in R^n$ 또한 존재합니다.(즉, $\eta ^T A = \gamma \eta ^T$를 만족하는 $\eta$가 존재하며, $\sigma (A) = \sigma (A^T)$입니다.)
+- $Av = \lambda v$인 $\lambda \in R$이 존재할 경우, left-eigenvector $\eta \in R^n$ 또한 존재합니다.(즉, $\eta ^T A = \lambda \eta ^T$를 만족하는 $\eta$가 존재하며, $\sigma (A) = \sigma (A^T)$입니다.)
 
 - 서로 다른 eigenvalue에 대응하는 eigenvector들은 서로 linearly independent합니다.
 
-- 모든 eigenvector $\sigma (A)$는 characteristic polynomial(특성방정식) $det(\gamma I - A) = 0$의 해이며, 따라서 det(A)는 모든 eigenvalue의 곱과 같습니다.(이때, 중근이 발생하는 경우 해당 eigenvalue는 여러번 곱해주어야 합니다.)
+- 모든 eigenvector $\sigma (A)$는 characteristic polynomial(특성방정식) $det(\lambda I - A) = 0$의 해이며, 따라서 det(A)는 모든 eigenvalue의 곱과 같습니다.(이때, 중근이 발생하는 경우 해당 eigenvalue는 여러번 곱해주어야 합니다.)
 
 - 어떤 nonsigular matrix P에 대해 $B = PAP^{-1}$일 경우 $\sigma (B) = \sigma (A)$입니다.
 
-- Eigenvalue가 복소수일 경우, 해당 eigenvalue의 conjugate 또한 eigenvalue입니다.
+- Eigenvalue가 복소수일 경우, 해당 eigenvalue의 conjugate 또한 eigenvalue입니다. 
+
+또한 matrix A를 하나의 좌표 변환으로 사용한다면, eigenvector는 A를 통해 좌표변환을 하여도 방향이 바뀌지 않고 크기만 변하는(스칼라 배만 되는) vector, eigentvalue는 vector의 크기 변화율로 이해할 수도 있습니다.
 
 
 ## Symmetric Matrices
+
+어떤 matrix $S \in R^{n \times n}$이 $S^T = S$를 만족할 경우 matrix S를 symmetric하다고 합니다.
+
+이때 symmetric matrix S가 $x^T S x \geq 0$라면 이를 positive semi-definite라고 하고($S \geq 0$라고 표시), $x^T S x \gt 0 \;\; if \; \forall x \ne 0$이면 positive definte($S \gt 0$라고 표시)라고 합니다.
+
+$S \in R^{n \times n}$가 real symmetric matrix라고 하면 다음의 성질을 갖습니다.
+
+- S의 모든 eigenvalue들은 실수입니다.
+
+- 서로 다른 eigenvalue에 대응하는 eigenvector들은 서로 othogonal합니다.
+
+- 언제나 $R^n$의 basis 형태의 n개의 orthonormal한 eigenvector들의 존재하며, $V = (v_1, \cdots, v_n) \in O(n)$을 eigenvector들이 이루는 orthogonal matrix, $\Lambda = diag(\lambda_1, \cdots, \lambda_n)$을 eigenvalue들이 이루는 diagonal matrix라고 할때, $S = V\Lambda V^T$입니다.
+
+- 모든 eigenvalue가 positive(nonnegative)라면 S는 positive (semi-)definite입니다.
+
+- S가 positive semi-definite이고, $\lambda_1, \lambda_n$이 각각 최대, 최소의 eigenvalue라면, $\lambda_1 = max_{|x|=1}\langle x, Sx \rangle, \;\;\; \lambda_n = min_{|x|=1}\langle x, Sx \rangle$
 
 
 

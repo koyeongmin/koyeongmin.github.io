@@ -329,7 +329,9 @@ Matrix $A \in R^{m \times n}$의 rank는 다음과 같은 성질을 갖습니다
 
 - $0 \leq rank(A) \leq min(m,n)$
 
-- $rank(A)$는 A의 row vector 중 서로 linearly independent한 vector들의 최대 갯수와 같습니다.
+- rank(A) = rank(A^T)
+
+- $rank(A)$는 A의 row vector(또는 column vector) 중 서로 linearly independent한 vector들의 최대 갯수와 같습니다.
 
 - rank(A)는 A의 minor 중 0이 아닌 것들의 hightest order와 같으며, 여기서 minor of order k는 A의 k x k submatrix의 determinant입니다.
 
@@ -429,6 +431,24 @@ A_i =
 $$
 
 특히, 모든 skew-symmetric matrix의 rank는 짝수입니다.
+
+Computer vision 분야에서 skew-symmetric matrix는 vector $u \in R^3$의 hat operator로 다음과 같이 주어집니다.
+
+$$
+\hat{u} = 
+\begin{pmatrix}
+0 & -u_3 & u_2\\ 
+u_3& 0 &-u_1 \\
+-u_2 & u_1 & 0
+\end{pmatrix} \in R^{3 \times 3}
+$$
+
+이러한 hat operator는 $R^3$ vector의 space에서 $R^{3 \times 3}$의 skew-symmetric matrix의 space로의 linear operator이며, 이를 이용하여 다음과 같이 vector의 cross product, 외적을 나타낼 수 있습니다.
+
+$$
+\hat{u} v = u \times v
+$$
+위의 경우 $u \ne 0$일 때, $rank(\hat{u}) = 2$이며, $\hat{u}u = u^T \hat{u} = 0$이므로  $\hat{u}$의 null space는 u에 의해 span됩니다.
 
 
 ## The Singular Value Decomposition (SVD)

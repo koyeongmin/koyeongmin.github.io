@@ -300,7 +300,7 @@ R&T\\
 \right\}
 $$
 
-이때 $R \in SO(n)$이면 special Euclidean group SE(n)이라고 하고, 특히 SE(3)은 rigid-body motion을 나타낸다.
+이때 $R \in SO(n)$이면 special Euclidean group SE(n)이라고 하고, 특히 SE(3)은 rigid-body motion을 나타냅니다.
 
 
 ## Range, Span, Null Space and Kernel, and Rank
@@ -341,9 +341,32 @@ Matrix $A \in R^{m \times n}$의 rank는 다음과 같은 성질을 갖습니다
 
 ## Eigenvalues and Eigenvectors
 
+$A \in C^{n \times n}$이 complex matrix라고 할 때, 다음을 만족하는 0이 아닌 vector $v \in C^n$을 A의 (right) eigenvector라고 하며, $\gamma$를 A의 eigenvalue라고 합니다.
+
+$$
+Av = \gamma v \;\;\;\;\;\; with  \gamma \in C
+$$
+
+이와 비슷하게 $v^T A = \gamma v^T$를 만족하는 v를 A의 left eigenvector라고 하기도 하며, matrix A의 모든 eigenvalue들의 집합을 spectrum $\sigma (A)$라고 합니다.
+
+또한 D가 matrix A의 eigenvalue들을 포함하는 diagonal matrix(대각행렬)이고, V가 각 eigenvalue에 대응하는 eigenvector를 column으로 가지고 있는 matrix라고 할 때, 위의 정의로부터 AV=VD 가 만족함을 유추할 수 있습니다.
+
+그리고 $A \in R^{n \times n}$인 square matrix일 경우 다음과 같은 성질을 갖습니다.
+
+- $Av = \gamma v$인 $\gamma \in R$이 존재할 경우, left-eigenvector $\eta \in R^n$ 또한 존재합니다.(즉, $\eta ^T A = \gamma \eta ^T$를 만족하는 $\eta$가 존재하며, $\sigma (A) = \sigma (A^T)$입니다.)
+
+- 서로 다른 eigenvalue에 대응하는 eigenvector들은 서로 linearly independent합니다.
+
+- 모든 eigenvector $\sigma (A)$는 characteristic polynomial(특성방정식) $det(\gamma I - A) = 0$의 해이며, 따라서 det(A)는 모든 eigenvalue의 곱과 같습니다.(이때, 중근이 발생하는 경우 해당 eigenvalue는 여러번 곱해주어야 합니다.)
+
+- 어떤 nonsigular matrix P에 대해 $B = PAP^{-1}$일 경우 $\sigma (B) = \sigma (A)$입니다.
+
+- Eigenvalue가 복소수일 경우, 해당 eigenvalue의 conjugate 또한 eigenvalue입니다.
 
 
 ## Symmetric Matrices
+
+
 
 ## Norms of Matrices
 

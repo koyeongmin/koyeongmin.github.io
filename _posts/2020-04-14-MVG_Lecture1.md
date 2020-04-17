@@ -382,7 +382,7 @@ $S \in R^{n \times n}$가 real symmetric matrix라고 하면 다음의 성질을
 
 - 모든 eigenvalue가 positive(nonnegative)라면 S는 positive (semi-)definite입니다.
 
-- S가 positive semi-definite이고, $\lambda_1, \lambda_n$이 각각 최대, 최소의 eigenvalue라면, $\lambda_1 = \max_{|x|=1}{\langle x, Sx \rangle}, \;\;\; \lambda_n = \min_{|x|=1}{\langle x, Sx \rangle}$
+- S가 positive semi-definite이고, $ \lambda_1, \lambda_n $이 각각 최대, 최소의 eigenvalue라면, 
 
 
 ## Norms of Matrices
@@ -410,6 +410,8 @@ $$
 $$
 
 ## Skew-symmetric Matrices
+
+
 
 ## The Singular Value Decomposition (SVD)
 

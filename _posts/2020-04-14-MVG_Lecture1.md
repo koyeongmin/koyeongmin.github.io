@@ -382,7 +382,7 @@ $S \in R^{n \times n}$가 real symmetric matrix라고 하면 다음의 성질을
 
 - 모든 eigenvalue가 positive(nonnegative)라면 S는 positive (semi-)definite입니다.
 
-- S가 positive semi-definite이고, $ \lambda_1, \lambda_n $이 각각 최대, 최소의 eigenvalue라면, 
+- S가 positive semi-definite이고, $ \lambda_1, \lambda_n $이 각각 최대, 최소의 eigenvalue라면, $ \lambda_1 = \max_{|x|=1}{\langle x, Sx \rangle} \;\;\; \lambda_n = \min_{|x|=1}{\langle x, Sx \rangle} $
 
 
 ## Norms of Matrices
@@ -411,6 +411,23 @@ $$
 
 ## Skew-symmetric Matrices
 
+어떤 matrix $A \in R^{n \times n}$이 $A^T = -A$를 만족하는 경우, A를 skew-symmetric 또는 anti-symmetric하다고 합니다.
+
+만약 A가 real skew-symmetric일 때, 다음과 같은 성질을 갖습니다.
+
+- A의 모든 eigenvalue은은 0이거나 복소수 성분만 가지고 있는 수(purely imaginary)입니다.
+
+- $A = V \Lambda V^T$를 만족하는 orthogonal matrix V가 존재하며, 이때 $\Lambda$는 block-diagonal matrix이고 $\Lambda=diag(A_1, \cdots , A_m, 0, \cdots, 0)$, 각 $A_i$는 다음과 같은 형태의 skew-symmetric matrix입니다.
+
+$$
+A_i = 
+\begin{pmatrix}
+0&a_i\\ 
+-a_i&0
+\end{pmatrix} \in R^{2 \times 2} \;\;\;\;\;\; i = 1, \cdots, m
+$$
+
+특히, 모든 skew-symmetric matrix의 rank는 짝수
 
 
 ## The Singular Value Decomposition (SVD)

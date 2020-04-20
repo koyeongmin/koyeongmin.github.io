@@ -533,7 +533,7 @@ $$
 y = Ax = U \Sigma V^T x \;\;\; \Leftrightarrow \;\;\; U^T y = \Sigma V^T x
 $$
 
-또한 여기서 $\alpha \equiv V^T x$를 basis V에서본 x의 coefficient, $\beta \equiv U^T y$를 basis U에서본 y의 coefficient라고 할 때, circle은 이며, 위의 관계식에서 다음이 성립합니다.
+또한 여기서 $\alpha \equiv V^T x$를 basis V에서본 x의 coefficient, $\beta \equiv U^T y$를 basis U에서본 y의 coefficient라고 할 때, circle은 $ \mid x \mid^{2}_{2} = \Sigma_{i} \alpha^{2}_{i} = 1$ 이며, 위의 관계식에서 다음이 성립합니다.
 
 $$
 \beta_i = \sigma_i \alpha_i \;\;\;\;\;\; \sum_{i}{\alpha^2_i} = \sum_{i}{\frac{\beta^2_i}{\sigma^2_i}} = 1
@@ -563,7 +563,7 @@ $$
 A A^{\dagger} A = A \;\;\;\;\;\; A^{\dagger} A A^{\dagger} = A^{\dagger}
 $$
 
-어떠한 linear system Ax = b 에서 $x_{min} = A^{\dagger} b$는 $|Ax - b|^2$의 minimizer들 중에서 $|x|$가 가장 작은 x를 찾습니다.
+어떠한 linear system Ax = b 에서 $x_{min} = A^{\dagger} b$는 $ \mid Ax - b \mid^2$의 minimizer들 중에서 $\mid x \mid$가 가장 작은 x를 찾습니다.
 
 
 <!--more-->

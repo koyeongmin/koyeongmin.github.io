@@ -527,7 +527,7 @@ $$
 A = U \Sigma V^T \;\;\;\;\; U \in R^{m \times p} \;\;\; V \in R^{n \times p} \;\;\; \Sigma \in R^{p \times p}
 $$
 
-이러한 SVD는 다음과 같이 쓸 수 있으며, 어떤 point x가 transformation A에 의해 y로 mapping될 때, basis V에서 본 x의 coordinate와 basis U에서 본 y의 coordinate사이의 관계가 $Sigma$로써 나타남을 의미합니다.
+이러한 SVD는 다음과 같이 쓸 수 있으며, 어떤 point x가 transformation A에 의해 y로 mapping될 때, basis V에서 본 x의 coordinate와 basis U에서 본 y의 coordinate사이의 관계가 $\Sigma$로써 나타남을 의미합니다.
 
 $$
 y = Ax = U \Sigma V^T x \;\;\; \Leftrightarrow \;\;\; U^T y = \Sigma V^T x

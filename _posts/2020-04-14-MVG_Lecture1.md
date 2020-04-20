@@ -448,10 +448,35 @@ $$
 $$
 \hat{u} v = u \times v
 $$
+
 위의 경우 $u \ne 0$일 때, $rank(\hat{u}) = 2$이며, $\hat{u}u = u^T \hat{u} = 0$이므로  $\hat{u}$의 null space는 u에 의해 span됩니다.
 
 
 ## The Singular Value Decomposition (SVD)
+
+SVD는 eigenvector와 eigenvalue를 non-square matrix로 일반화한 것으로 이해할 수 있으며, SVD의 풀이는 numerical한 방법으로 잘 해결됩니다.
+
+이러한 SVD는 matrix inversion, rank computation, linear least-squares estimation, projection, fixed-rank approximation 등의 여러 선형 대수적인 문제를 해결하기 위해 eigenvalue decomposition과 함께 널리 사용됩니다.
+
+$A \in R^{m \times n} \;\;\; m \geq n$이고, rank(A) = p일 때, 다음을 만족하는 matrix들이 존재하며 이를 찾는 것이 SVD입니다.
+
+$$
+A = U \Sigma V^T
+$$
+
+- $U \in R^{m \times p}$ : 각 column들이 orthnormal
+
+- $V \in R^{n \times p}$ : 각 column들이 orthnormal
+
+- $\Sigma \in R^{p \times p}, \;\;\; \Sigma = diag(\sigma_1, \cdots, \sigma_p) \;\;\; \sigma_1 \geq \cdots \geq \sigma_p $
+
+이때 A 가 symmetric square matrix일 경우 다음과 같이 나타납니다.
+
+$$
+A = V \Lambda V^T, \;\;\; V \in O(n), \;\;\; \Lambda = diag(\lambda_1, \cdots, \lambda_n)
+$$
+
+
 
 
 

@@ -513,20 +513,33 @@ A(v_1, \cdots, v_n) = (u_1, \cdot, u_m)
 \end{pmatrix}
 $$
 
-위의 식을 $A \tilde{V} = \tilde{U} \tilde{\Sigma}$라고 하면, 다음과 같이 쓸 수 있다.
+위의 식을 $A \tilde{V} = \tilde{U} \tilde{\Sigma}$라고 하면, 다음과 같이 쓸 수 있습니다.
 
 $$
 A = \tilde{U} \tilde{\Sigma} \tilde{V}^T
 $$
 
-이때, rank(A) = p이므로 $Av_i = \sigma_i u_i$에서 얻을 수 있는 orthonormal한 $u_i$는 p개 뿐이므로 p개의 $\sigma$만을 취하며, $\tilde{V}$의 각 column vector는 orthonormal하므로 $V V^T = I$가 된다.
+이때, rank(A) = p이므로 $Av_i = \sigma_i u_i$에서 얻을 수 있는 orthonormal한 $u_i$는 p개 뿐이므로 p개의 $\sigma$만을 취하며, $\tilde{V}$의 각 column vector는 orthonormal하므로 $V V^T = I$가 됩니다.
 
-위의 식을 간단히 나타내기 위해 $\tilde{U}$의 column과 $\tilde{V}^T$의 row중 zero singular value과 곱해지는 부분을 지우면 다음과 같은 형태로 쓸 수 있다.
+위의 식을 간단히 나타내기 위해 $\tilde{U}$의 column과 $\tilde{V}^T$의 row중 zero singular value과 곱해지는 부분을 지우면 다음과 같은 형태로 쓸 수 있습니다.
 
 $$
 A = U \Sigma V^T \;\;\;\;\; U \in R^{m \times p} \;\;\; V \in R^{n \times p} \;\;\; \Sigma \in R^{p \times p}
 $$
 
+이러한 SVD는 다음과 같이 쓸 수 있으며, 어떤 point x가 transformation A에 의해 y로 mapping될 때, basis V에서 본 x의 coordinate와 basis U에서 본 y의 coordinate사이의 관계가 $Sigma$로써 나타남을 의미합니다.
+
+$$
+y = Ax = U \Sigma V^T x \;\;\; \Leftrightarrow \;\;\; U^T y = \Sigma V^T x
+$$
+
+또한 여기서 $\alpha \equiv V^T x$를 basis V에서본 x의 coefficient, $\beta \equiv U^T y$를 basis U에서본 y의 coefficient라고 할 때, circle은 $|x|^2_2 = \Sigma_i \alpha^2_i = 1$이며, 위의 관계식에서 다음이 성립합니다.
+
+$$
+\beta_i = \sigma_i \alpha_i \;\;\;\;\;\; \sum_{i}{\alpha^2_i} = \sum_{i}{\frac{\beta^2_i}{\sigma^2_i}} = 1
+$$
+
+이는 matrix A가 unit sphere(단위 구)를 ellipsoid(타원형)으로 semi-axes $\sigma_i u_i$를 따라 mapping한다고 볼 수 있습니다.
 
 ## The Generalized (Moore Penrose) Inverse
 

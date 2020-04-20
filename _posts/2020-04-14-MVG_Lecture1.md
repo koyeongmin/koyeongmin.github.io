@@ -478,7 +478,7 @@ $$
 
 SVD의 유도 과정을 살펴보면, 먼저 $A \in R^{m \times n} \;\;\; m \geq n$이고 rank(A) = p일 때, $A^T A \in R^{n \times n}$와 같이 symmetric하고 positive semi-definite한 matrix를 만들 수 있습니다.
 
-따라서 $A^T A$는 non-negative한 eigenvalue $\sigma^2_1 \geq \cdos \geq \sigma^2_n \geq 0$를 가지며, 이에 대응하는 orthonrmal eigenvector $v_1, \cdots, v_n$을 갖고, 이때 eigenvalue들의 제곱근인 $\sigma_i$를 singular value라고 합니다.
+따라서 $A^T A$는 non-negative한 eigenvalue $\sigma^2_1 \geq \cdots \geq \sigma^2_n \geq 0$를 가지며, 이에 대응하는 orthonrmal eigenvector $v_1, \cdots, v_n$을 갖고, 이때 eigenvalue들의 제곱근인 $\sigma_i$를 singular value라고 합니다.
 
 $$
 ker(A^T A) = ker(A) \;\;\;\;\;\; range(A^T A) = range(A^T)
@@ -486,23 +486,50 @@ $$
 
 그리고 위과 같은 관계가 성립하는데, $A^T A$가 결국 $A$에 의해 input vector를 mapping하고난 후 $A^T$를 사용하여 다시 mapping하는 것으로 이해할 수 있으므로, $ker(A^T A)$의 경우 첫번째 mapping A에 의해 0이 되면 전체 mapping도 0이 되므로 $ker(A)$와 같아지고, $range(A^T A)$의 경우에도 전체 mapping의 range는 결국 마지막 mapping인 A^T와 같아집니다.
 
-이때, eigenvector를 통해 이미 n개의 orthonormal한 vector를 가지고 있고 $dim(range(A^T)) = p$이므로 $range(A^T) = span(v_1, \cdots, v_p)$, 그리고 $ker(A) = span(v_{p+1}, \cdots, v_n$과 같이 볼 수 있습니다.
+이때, eigenvector를 통해 이미 n개의 orthonormal한 vector를 가지고 있고 $dim(range(A^T)) = p$이므로 $range(A^T) = span(v_1, \cdots, v_p)$, 그리고 $ker(A) = span(v_{p+1}, \cdots, v_n)$과 같이 볼 수 있습니다.
 
 이를 이용하여 다음과 같이 새로운 vector $u_i \in R^m$을 정의할 수 있습니다.
 
 $$
-u_i \equiv 1 \frac{1}{\sigma_i} A v_i \Leftrightarrow A v_i = \sigma_i u_i, \;\;\;\;\;\; i = 1, \cdots, p
+u_i \equiv \frac{1}{\sigma_i} A v_i \Leftrightarrow A v_i = \sigma_i u_i, \;\;\;\;\;\; i = 1, \cdots, p
 $$
 
 또한 이들은 다음과 같이 서로 orthonormal합니다.
 
 $$
-\langle u_i, u_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle Av_i, Av_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle v_i, A^TAv_j \rangle = \delta_{ij}
+\langle u_i, u_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle Av_i, Av_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle v_i, A^TAv_j \rangle = \delta_{ij} \;\;\;\;\; \delta_{ij} = 1 \;if i=j \;\delta_{ij} = 0 \; otherwise
+$$
+
+이와 같이 생성된 $\{u_i\}^p_{i=1}$는 $R^m$의 basis $\{u_i\}^p_{i=m}$의 일부로 사용될 수 있으며, $Av_i = \sigma_i u_i$이므로 다음과 같습니다.
+
+$$
+A(v_1, \cdots, v_n) = (u_1, \cdot, u_m)
+\begin{pmatrix}
+\sigma_1 & 0 & 0 & \cdots & 0\\ 
+0 & \ddots & 0 & \vdots & 0\\ 
+0 & \cdots & \sigma_p & \vdots & 0\\
+\vdots & \cdots & \cdots & \vdots & 0\\
+0 & \cdots & \cdots & 0 & 0
+\end{pmatrix}
+$$
+
+위의 식을 $A \tilde{V} = \tilde{U} \tilde{\Sigma}$라고 하면, 다음과 같이 쓸 수 있다.
+
+$$
+A = \tilde{U} \tilde{\Sigma} \tilde{V}^T
+$$
+
+이때, rank(A) = p이므로 $Av_i = \sigma_i u_i$에서 얻을 수 있는 orthonormal한 $u_i$는 p개 뿐이므로 p개의 $\sigma$만을 취하며, $\tilde{V}$의 각 column vector는 orthonormal하므로 $V V^T = I$가 된다.
+
+위의 식을 간단히 나타내기 위해 $\tilde{U}$의 column과 $\tilde{V}^T$의 row중 zero singular value과 곱해지는 부분을 지우면 다음과 같은 형태로 쓸 수 있다.
+
+$$
+A = U \Sigma V^T \;\;\;\;\; U \in R^{m \times p} \;\;\; V \in R^{n \times p} \;\;\; \Sigma \in R^{p \times p}
 $$
 
 
-
 ## The Generalized (Moore Penrose) Inverse
+
 
 
 

@@ -476,7 +476,29 @@ $$
 A = V \Lambda V^T, \;\;\; V \in O(n), \;\;\; \Lambda = diag(\lambda_1, \cdots, \lambda_n)
 $$
 
+SVD의 유도 과정을 살펴보면, 먼저 $A \in R^{m \times n} \;\;\; m \geq n$이고 rank(A) = p일 때, $A^T A \in R^{n \times n}$와 같이 symmetric하고 positive semi-definite한 matrix를 만들 수 있습니다.
 
+따라서 $A^T A$는 non-negative한 eigenvalue $\sigma^2_1 \geq \cdos \geq \sigma^2_n \geq 0$를 가지며, 이에 대응하는 orthonrmal eigenvector $v_1, \cdots, v_n$을 갖고, 이때 eigenvalue들의 제곱근인 $\sigma_i$를 singular value라고 합니다.
+
+$$
+ker(A^T A) = ker(A) \;\;\;\;\;\; range(A^T A) = range(A^T)
+$$
+
+그리고 위과 같은 관계가 성립하는데, $A^T A$가 결국 $A$에 의해 input vector를 mapping하고난 후 $A^T$를 사용하여 다시 mapping하는 것으로 이해할 수 있으므로, $ker(A^T A)$의 경우 첫번째 mapping A에 의해 0이 되면 전체 mapping도 0이 되므로 $ker(A)$와 같아지고, $range(A^T A)$의 경우에도 전체 mapping의 range는 결국 마지막 mapping인 A^T와 같아집니다.
+
+이때, eigenvector를 통해 이미 n개의 orthonormal한 vector를 가지고 있고 $dim(range(A^T)) = p$이므로 $range(A^T) = span(v_1, \cdots, v_p)$, 그리고 $ker(A) = span(v_{p+1}, \cdots, v_n$과 같이 볼 수 있습니다.
+
+이를 이용하여 다음과 같이 새로운 vector $u_i \in R^m$을 정의할 수 있습니다.
+
+$$
+u_i \equiv 1 \frac{1}{\sigma_i} A v_i \Leftrightarrow A v_i = \sigma_i u_i, \;\;\;\;\;\; i = 1, \cdots, p
+$$
+
+또한 이들은 다음과 같이 서로 orthonormal합니다.
+
+$$
+\langle u_i, u_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle Av_i, Av_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle v_i, A^TAv_j \rangle = \delta_{ij}
+$$
 
 
 

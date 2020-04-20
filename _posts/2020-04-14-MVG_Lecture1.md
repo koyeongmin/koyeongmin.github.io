@@ -533,7 +533,7 @@ $$
 y = Ax = U \Sigma V^T x \;\;\; \Leftrightarrow \;\;\; U^T y = \Sigma V^T x
 $$
 
-또한 여기서 $\alpha \equiv V^T x$를 basis V에서본 x의 coefficient, $\beta \equiv U^T y$를 basis U에서본 y의 coefficient라고 할 때, circle은 $|x|^2_2 = \Sigma_i \alpha^2_i = 1$이며, 위의 관계식에서 다음이 성립합니다.
+또한 여기서 $\alpha \equiv V^T x$를 basis V에서본 x의 coefficient, $\beta \equiv U^T y$를 basis U에서본 y의 coefficient라고 할 때, circle은 이며, 위의 관계식에서 다음이 성립합니다.
 
 $$
 \beta_i = \sigma_i \alpha_i \;\;\;\;\;\; \sum_{i}{\alpha^2_i} = \sum_{i}{\frac{\beta^2_i}{\sigma^2_i}} = 1

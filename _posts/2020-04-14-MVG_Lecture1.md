@@ -497,13 +497,13 @@ $$
 또한 이들은 다음과 같이 서로 orthonormal합니다.
 
 $$
-\langle u_i, u_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle Av_i, Av_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle v_i, A^TAv_j \rangle = \delta_{ij} \;\;\;\;\; \delta_{ij} = 1 \;if i=j \;\delta_{ij} = 0 \; otherwise
+\langle u_i, u_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle Av_i, Av_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle v_i, A^TAv_j \rangle = \delta_{ij} \;\;\;\;\; \delta_{ij} = 1 \;\; if \;\; i=j \;\;\; \delta_{ij} = 0 \;\; otherwise
 $$
 
 이와 같이 생성된 $\{u_i\}^p_{i=1}$는 $R^m$의 basis $\{u_i\}^p_{i=m}$의 일부로 사용될 수 있으며, $Av_i = \sigma_i u_i$이므로 다음과 같습니다.
 
 $$
-A(v_1, \cdots, v_n) = (u_1, \cdot, u_m)
+A(v_1, \cdots, v_n) = (u_1, \cdots, u_m)
 \begin{pmatrix}
 \sigma_1 & 0 & 0 & \cdots & 0\\ 
 0 & \ddots & 0 & \vdots & 0\\ 
@@ -543,8 +543,27 @@ $$
 
 ## The Generalized (Moore Penrose) Inverse
 
+$det(A) \ne 0$를 만족하는 몇몇 quadratic matrix들은 inverse matrix를 정의할 수 있으며, 이러한 모든 invertible matrix들은 GL(n)에 속해있습니다.
 
+하지만 SVD를 이용하면 임의의 모양의 matrix $A \in R^{m \times n}$에 적용가능한 (generalized)inverse(또는 pseudo inverse)를 다음과 같이 정의할 수 있습니다.
 
+$$
+A^{\dagger} = V \Sigma^{\dagger} U^{\dagger}, \;\;\; where \Sigma^{\dagger} = 
+\begin{pmatrix}
+\Sigma^{-1}_1 & 0 \\ 
+0 & 0 \\
+\end{pmatrix}_{n \times m}
+$$
+
+여기서 $\Sigma_1$은 non-zero singular value들의 diagonal matrix입니다.
+
+이러한 pseudo inverse는 다음과 같이 inverse과 비슷한 성질을 갖습니다.
+
+$$
+A A^{\dagger} A = A \;\;\;\;\;\; A^{\dagger} A A^{\dagger} = A^{\dagger}
+$$
+
+어떠한 linear system Ax = b 에서 $x_{min} = A^{\dagger} b$는 $|Ax - b|^2$의 minimizer들 중에서 $|x|$가 가장 작은 x를 찾습니다.
 
 
 <!--more-->

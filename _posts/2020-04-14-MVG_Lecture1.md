@@ -548,7 +548,7 @@ $det(A) \ne 0$를 만족하는 몇몇 quadratic matrix들은 inverse matrix를 �
 하지만 SVD를 이용하면 임의의 모양의 matrix $A \in R^{m \times n}$에 적용가능한 (generalized)inverse(또는 pseudo inverse)를 다음과 같이 정의할 수 있습니다.
 
 $$
-A^{\dagger} = V \Sigma^{\dagger} U^{\dagger}, \;\;\; where \Sigma^{\dagger} = 
+A^{\dagger} = V \Sigma^{\dagger} U^{\dagger}, \;\;\; where \;\;\; \Sigma^{\dagger} = 
 \begin{pmatrix}
 \Sigma^{-1}_1 & 0 \\ 
 0 & 0 \\

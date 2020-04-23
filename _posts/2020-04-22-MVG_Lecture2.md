@@ -35,7 +35,7 @@ $$
 $R^3$에서는 다음과 같이 cross product를 정의할 수 있습니다.
 
 $$
-\times \;\;\; : \;\;\; R^3 \times R^3 \;\;\; : \;\;\; 
+\times \;\;\; : \;\;\; R^3 \times R^3 \;\;\; : \;\;\; u \times v = 
 \begin{pmatrix}
 u_2 v_3 - u_3 v_2 \\ 
 u_3 v_1 - u_1 v_3 \\ 
@@ -51,7 +51,7 @@ $$
 0 & -u_3 & u_2 \\ 
 u_3 & 0 & -u_1 \\ 
 -u_2 & u_1 & 0 
-\end{pmatrix} \in R^{3 \times 3}
+\end{pmatrix} \in R^{3 \times 3} \;\;\;\;\;\; u \times v = \hat{u}v
 $$
 
 위에서 사용된 $\hat{}$ operator는 $R^3$와 so(3)사이의 isomorphism이며, 이것의 역연산은 $\check{}:so(3) \rightarrow R^3$로 표현합니다.

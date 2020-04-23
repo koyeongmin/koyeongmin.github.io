@@ -35,7 +35,7 @@ $$
 $R^3$에서는 다음과 같이 cross product를 정의할 수 있습니다.
 
 $$
-\times \;\;\; : \;\;\; R^3 \tiems R^3 \;\;\; : \;\;\; 
+\times \;\;\; : \;\;\; R^3 \times R^3 \;\;\; : \;\;\; 
 \begin{pmatrix}
 u_2 v_3 - u_3 v_2 \\ 
 u_3 v_1 - u_1 v_3 \\ 

@@ -59,6 +59,29 @@ $$
 
 ## Rigid-body Motion
 
+Rigid-body motion은 $g_t : R^3 \rightarrow R^3$과 같은 mapping으로 norm과 cross product를 보존합니다.
+
+$$
+\mid g_t (v) \mid = \mid v \mid, \;\;\; \forall v \in R^3
+$$
+
+$$
+g_t(u) \times g_t(v) = g_t(u \times v), \;\;\; \forall u, v \in R^3
+$$
+
+또한 norm과 scalar product사이에는 다음과 같은 polarization identity가 존재하므로, rigid-body motion은 inner product와 cross product를 보존한다고 할 수도 있습니다.
+
+$$
+\leftangle u, v \rightangle = \frac{1}{4} (\mid u+v \mid^2 - \mid u-v \mid^2)
+$$
+
+그리고 이러한 성질을 조합하면 다음과 같은 triple product 또한 보존됨을 알 수 있으며, 이는 부피의 보존성을 의미합니다.
+
+$$
+\leftangle \g_t(u), \g_t(v) \times \g_t(w) \rightangle = \leftangle u, v \times w \rightangle, \;\;\; \forall u, v, w \in R^3
+$$
+
+
 ## Exponential Coordinates of Rotation
 
 ## Lie Group and Lie Algebra

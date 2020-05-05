@@ -207,11 +207,11 @@ $$
 Homogeneous coordinate에 대해서는 다음과 같이 쓸 수 있습니다.
 
 $$
-SE(3) \equiv \{g = 
+SE(3) \equiv \left\{g = 
 \begin{pmatrix}
 R & T\\ 
 0 & 1 
-\end{pmatrix} \mid R \in SO(3), \; T \in R^3 \} \subset R^{4 \times 4}
+\end{pmatrix} \mid R \in SO(3), \; T \in R^3 \right\} \subset R^{4 \times 4}
 $$
 
 
@@ -248,11 +248,11 @@ $$
 이는 Lie algbra가 Lie group의 tangent space인 것과 같으며, 다음과 같이 하나의 group으로 볼 수 있습니다.
 
 $$
-se(3) \equiv \{ \hat{\xi}
+se(3) \equiv \left\{ \hat{\xi}
 \begin{pmatrix}
 \hat{w} & v\\ 
 0 & 0
-\end{pmatrix} \mid \hat{w} \in so(3), \; v \in R^3 \} \subset R^{4 \times 4}
+\end{pmatrix} \mid \hat{w} \in so(3), \; v \in R^3 \right\} \subset R^{4 \times 4}
 $$
 
 그리고 skew-symmetric matrix와 비슷하게 $\hat{}$, $\check{}$ operator를 통해 twist $\hat{\xi} \in se(3)$과 twist coordinates $\xi \in R^6$ 사이의 변환을 다음과 같이 나타낼 수 있습니다.

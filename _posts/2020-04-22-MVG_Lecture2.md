@@ -129,7 +129,7 @@ $$
 
 ## Lie Group and Lie Algebra
 
-위에서 infintesimal roation $R \in SO(3)$은 어떤 skew-symmetric matrix $so(3) = {\hat{w} \mid w \in R^3}$ 에 의해 근사될 수 있음을 보였고, 이러한 rotation group SO(3)는 Lie group, so(3)는 Lie algebra라고 합니다.
+위에서 infintesimal roation $R \in SO(3)$은 어떤 skew-symmetric matrix $so(3) = {\hat{w} \mid w \in R^3}$ 에 의해 근사될 수 있음을 보였고, 이러한 rotation group SO(3)는 Lie group, so(3)는 Lie algebra라고 하며, Lie algebra는 rotation group SO(3)의 identity에서의 tangent space
 
 Lie algebra에서 사용되는 연산 중 하나인 Lie bracket은 다음과 같습니다.
 
@@ -215,8 +215,69 @@ R & T\\
 $$
 
 
-
 ## The Lie Algebra of Twists
+
+Rigid-body transformation $g$에 대해서 다음과 같이 계산할 수 있습니다.
+
+$$
+\dot{g}(t)g^{-1}(t) = 
+\begin{pmatrix}
+\dot{R}R^T & \dot{T}-\dot{R}R^TT\\ 
+0 & 0
+\end{pmatrix} \in R^{4 \times 4}
+$$
+
+이때, 위에서 보았듯이 SO(3)의 경우 $\dot{R}R^T$는 알맞는 skew-symmetric matrix $\hat{w} \in so(3)$로 나타낼 수 있으며, $v(t) = \dot{T}(t) - \hat{w}(t) T(t)$라고 하면 다음과 같이 쓸 수 있습니다.
+
+$$
+\dot{g}(t)g^{-1}(t) = 
+\begin{pmatrix}
+\hat{w}(t) & v(t)\\ 
+0 & 0
+\end{pmatrix} \equiv \hat{\xi}(t) \in R^{4 \times 4}
+$$
+
+여기서 양변에 g(t)를 곱하면 다음과 같은 식을 얻을 수 있습니다.
+
+$$
+\dot{g} = \dot{g}g^{-1}g = \hat{\xi}g
+$$
+
+여기서 $4 \times 4$ matrix $\hat{\xi}$은 curve g(t)의 tangent로 볼 수 있으며, $\hat{\xi}$를 twist라고 합니다.
+
+이는 Lie algbra가 Lie group의 tangent space인 것과 같으며, 다음과 같이 하나의 group으로 볼 수 있습니다.
+
+$$
+se(3) \equiv \{ \hat{\xi}
+\begin{pmatrix}
+\hat{w} & v\\ 
+0 & 0
+\end{pmatrix} \mid \hat{w} \in so(3), \; v \in R^3 \} \subset R^{4 \times 4}
+$$
+
+그리고 skew-symmetric matrix와 비슷하게 $\hat{}$, $\check{}$ operator를 통해 twist $\hat{\xi} \in se(3)$과 twist coordinates $\xi \in R^6$ 사이의 변환을 다음과 같이 나타낼 수 있습니다.
+
+$$
+\hat{\xi} \equiv
+\begin{pmatrix}
+v\\ 
+w
+\end{pmatrix} ^{\wedge} \equiv
+\begin{pmatrix}
+\hat{w} & v\\ 
+0 & 0
+\end{pmatrix} \in R^{4 \times 4} \;\;\;\;\;\; 
+\begin{pmatrix}
+\hat{w} & v\\ 
+0 & 0
+\end{pmatrix}^{\vee} = 
+\begin{pmatrix}
+v\\ 
+w
+\end{pmatrix} \in R^{6}
+$$
+
+
 
 ## Exponential Coordinates for SE(3)
 

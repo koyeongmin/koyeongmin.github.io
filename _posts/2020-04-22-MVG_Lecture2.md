@@ -137,7 +137,7 @@ $$
 \lbrack ., . \rbrack \; : \; so(3) \times so(3) \; \rightarrow \; so(3) \;\;\;\;\;\; \lbrack \hat{w}, \hat{v} \rbrack \equiv \hat{w}\hat{v} - \hat{v}\hat{w}
 $$
 
-skew symmetric matrix $\hat{w}$로 나타난 infinitesimal formulation은 다음과 같이 differential equation system으로 생각 할 수 있습니다.
+skew symmetric matrix $\hat{w}$가 시간 t에 대해 constant하다고 하면, infinitesimal formulation은 다음과 같이 differential equation system으로 생각 할 수 있습니다.
 
 $$
 \begin{cases}
@@ -154,17 +154,34 @@ $$
 
 이는 $\mid w \mid = 1$일 경우 $w \in R^3$을 축으로 하는 t만큼의 회전을 의미하며, 이때 t는 scalar이므로 $\hat{v} = \hat{w} t$와 같이 하나의 vector로 표현될 수 있습니다.
 
-이러한 matrix exponetial을 통해 다음과 같은 Lie algebra와 Lie group사이의 mapping을 표현 할 수 있습니다.
+이러한 matrix exponetial을 통해 다음과 같은 Lie algebra에서 Lie group으로의 mapping을 표현 할 수 있습니다.
 
 $$
-exp : so(3) \rightarrow SO(3) \;\;\; \hat{w} e^{\hat{w}}
+exp : so(3) \rightarrow SO(3) \;\;\; \hat{w} \rightarrow e^{\hat{w}}
 $$
 
+마찬가지로 exponetial의 역인 logarithm을 사용하면, Lie group에서 Lie algebra으로의 mapping을 $\hat{w} = log(R)$과 같이 찾을 수 있습니다.
 
+$R = (r_{ij}) \nq I$라면 $w$는 다음과 같습니다.
 
+##
+\mid w \mid cos^{-1} (\frac{trace(R)-1}{2}) \;\;\;\;\;\; \frac{w}{\mid w \mid} = \frac{1}{2sin(\mid w \mid)}
+\begin{pmatrix}
+r_{32} - r_{23}\\ 
+r_{13} - r_{31}\\ 
+r_{21} - r_{12}
+\end{pmatrix}
+##
+
+$R=I$일 경우 $\mid w \mid = 0$이며, 위의 식으로 부터 rotation R은 $\mid w \mid$만큼의 각도로 $\frac{w}{\mid w \mid}$의 축을 기준으로 회전하는 변환임을 알 수 있습니다.(해당 강의 자료에서는 이에 대한 증명을 진행하지 않음)
+
+또한 각도에 $2\pi$를 곱하여도 같은 ratation이 되므로 위의 표현은 uniqe하지 않습니다.
 
 
 ## Rodrigues’ Formula
+
+
+
 
 ## Representation of Rigid-body Motions SE(3)
 

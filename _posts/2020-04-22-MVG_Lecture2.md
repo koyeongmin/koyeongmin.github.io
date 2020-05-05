@@ -162,16 +162,16 @@ $$
 
 마찬가지로 exponetial의 역인 logarithm을 사용하면, Lie group에서 Lie algebra으로의 mapping을 $\hat{w} = log(R)$과 같이 찾을 수 있습니다.
 
-$R = (r_{ij}) \nq I$라면 $w$는 다음과 같습니다.
+$R = (r_{ij}) \ne I$라면 $w$는 다음과 같습니다.
 
-##
+$$
 \mid w \mid cos^{-1} (\frac{trace(R)-1}{2}) \;\;\;\;\;\; \frac{w}{\mid w \mid} = \frac{1}{2sin(\mid w \mid)}
 \begin{pmatrix}
 r_{32} - r_{23}\\ 
 r_{13} - r_{31}\\ 
 r_{21} - r_{12}
 \end{pmatrix}
-##
+$$
 
 $R=I$일 경우 $\mid w \mid = 0$이며, 위의 식으로 부터 rotation R은 $\mid w \mid$만큼의 각도로 $\frac{w}{\mid w \mid}$의 축을 기준으로 회전하는 변환임을 알 수 있습니다.(해당 강의 자료에서는 이에 대한 증명을 진행하지 않음)
 
@@ -180,7 +180,20 @@ $R=I$일 경우 $\mid w \mid = 0$이며, 위의 식으로 부터 rotation R은 $
 
 ## Rodrigues’ Formula
 
+$e^{i\phi} = \cos(\phi) + i \sin(\phi), \;\;\;\;\;\; \forall \phi \in R $와 같은 Euler equation은 exponential을 삼각함수로 표현해줍니다.
 
+Skew-symmetric matrix의 경우에도 다음과 같은 표현식이 있으며, 이를 Rodrigues' formula라고 합니다.
+
+$$
+e^{\hat{w}} = I + \frac{\hat{w}}{\mid w \mid}\sin(\mid w \mid) + \frac{\hat{w}^2}{\mid w \mid^2}(1 - \cos(\mid w \mid))
+$$
+
+증명은 다음과 같습니다.
+
+- $t = \mid w \mid, \;\;\; v = w/\mid w \mid$
+- $\hat{v}^2 = vv^T - I, \;\;\; \hat{v}^3 = - \hat{v}, \cdots $
+- $e^{\hat{w}} = e^{\hat{v}t} = I + (t - \frac{t^3}{3!} + \frac{t^5}{5!} - \cdots)\hat{v} + (\frac{t^2}{2!} - \frac{t^4}{4!} + \frac{t^6}{6!} - \cdots)\hat{v}^2 $
+- $e^{\hat{w}} = e^{\hat{v}t} = I + \sin(t)\hat{v} + (1 - \cos(t))\hat{v}^2
 
 
 ## Representation of Rigid-body Motions SE(3)

@@ -81,7 +81,7 @@ $$
 \langle g_t(u), g_t(v) \times g_t(w) \rangle = \langle u, v \times w \rangle, \;\;\; \forall u, v, w \in R^3
 $$
 
-이와 같이 regid-body motion은 길이와 orientation을 보존하므로, regid-body motion $g_t$는 물체의 origin과 orthonormal oriented vector($e_1, e_2, e_3 \in R^3$)로 구성되는 Cartesian coordinate frame의 motion으로 충분히 정의될 수 있습니다.
+이와 같이 rigid-body motion은 길이와 orientation을 보존하므로, rigid-body motion $g_t$는 물체의 origin과 orthonormal oriented vector($e_1, e_2, e_3 \in R^3$)로 구성되는 Cartesian coordinate frame의 motion으로 충분히 정의될 수 있습니다.
 
 여기서 origin의 motion은 translation $T \in R^3$로 표현되고, vector $e_i$의 transformation은 $r_i = g_t(e_i)$와 같은 새로운 vector로 주어집니다.
 
@@ -193,10 +193,28 @@ $$
 - $t = \mid w \mid, \;\;\; v = w/\mid w \mid$
 - $\hat{v}^2 = vv^T - I, \;\;\; \hat{v}^3 = - \hat{v}, \cdots $
 - $e^{\hat{w}} = e^{\hat{v}t} = I + (t - \frac{t^3}{3!} + \frac{t^5}{5!} - \cdots)\hat{v} + (\frac{t^2}{2!} - \frac{t^4}{4!} + \frac{t^6}{6!} - \cdots)\hat{v}^2 $
-- $e^{\hat{w}} = e^{\hat{v}t} = I + \sin(t)\hat{v} + (1 - \cos(t))\hat{v}^2
+- $e^{\hat{w}} = e^{\hat{v}t} = I + \sin(t)\hat{v} + (1 - \cos(t))\hat{v}^2$
 
 
 ## Representation of Rigid-body Motions SE(3)
+
+Rigid-body motion은 translation과 rotation에 의해 unique하게 결정됩니다. 따라서 rigid-body motion의 space를 하나의 special Euclidean transformation의 group으로 볼 수 있으며, 이는 다음과 같습니다.
+
+$$
+SE(3) \equiv \{g = (R, T) \mid R \in SO(3),\; T \in R^3 \}
+$$
+
+Homogeneous coordinate에 대해서는 다음과 같이 쓸 수 있습니다.
+
+$$
+SE(3) \equiv \{g = 
+\begin{pmatrix}
+R & T\\ 
+0 & 1 
+\end{pmatrix} \mid R \in SO(3), \; T \in R^3 \} \subset R^{4 \times 4}
+$$
+
+
 
 ## The Lie Algebra of Twists
 

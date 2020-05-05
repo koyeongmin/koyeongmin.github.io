@@ -72,17 +72,37 @@ $$
 또한 norm과 scalar product사이에는 다음과 같은 polarization identity가 존재하므로, rigid-body motion은 inner product와 cross product를 보존한다고 할 수도 있습니다.
 
 $$
-\leftangle u, v \rightangle = \frac{1}{4} (\mid u+v \mid^2 - \mid u-v \mid^2)
+\langle u, v \rangle = \frac{1}{4} (\mid u+v \mid^2 - \mid u-v \mid^2)
 $$
 
 그리고 이러한 성질을 조합하면 다음과 같은 triple product 또한 보존됨을 알 수 있으며, 이는 부피의 보존성을 의미합니다.
 
 $$
-\leftangle \g_t(u), \g_t(v) \times \g_t(w) \rightangle = \leftangle u, v \times w \rightangle, \;\;\; \forall u, v, w \in R^3
+\langle g_t(u), g_t(v) \times g_t(w) \rangle = \langle u, v \times w \rangle, \;\;\; \forall u, v, w \in R^3
 $$
 
+이와 같이 regid-body motion은 길이와 orientation을 보존하므로, regid-body motion $g_t$는 물체의 origin과 orthonormal oriented vector($e_1, e_2, e_3 \in R^3$)로 구성되는 Cartesian coordinate frame의 motion으로 충분히 정의될 수 있습니다.
+
+여기서 origin의 motion은 translation $T \in R^3$로 표현되고, vector $e_i$의 transformation은 $r_i = g_t(e_i)$와 같은 새로운 vector로 주어집니다.
+
+이때, vector들의 scalar product와 croos product는 다음과 같이 보존됩니다.
+
+$$
+r_i^T r_j = g_t(e_i)g_t(e_j) = e_i^T e_j = \delta_{ij}, \;\;\;\;\;\; r_1 \times r_2 = r_3
+$$
+
+위의 첫번째 constraint는 matrix $R = (r_1, r_2, r_3)$이 orthogonal (rotation) matrix, $R^T R = RR^T = I$임을 의미하며, 두번째 constraint는 $det(R) = \pm 1$임을 의미합니다.
+
+이는 R이 group SO(3)의 element라는 의미이기도 하며, 최종적으로 rigid body motion $g_t$는 다음과 같이 쓰여집니다.
+
+$$
+g_t(x) = Rx + T
+$$
 
 ## Exponential Coordinates of Rotation
+
+
+
 
 ## Lie Group and Lie Algebra
 

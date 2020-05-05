@@ -101,7 +101,31 @@ $$
 
 ## Exponential Coordinates of Rotation
 
+Exponential Coordinates of Rotation는 infinitesimal rotation(매우 작은 각도의 회전)의 표현을 위해 사용됩니다.
 
+우선 rotation matrix들의 family R(t)가 한 point를 orginal location(R(0) = I)를 다른 지점으로 continuously transform한다고 합시다.
+
+$$
+X_{trans}(t) = R(t) X_{orig}, \;\;\; with R(t) \in SO(3)
+$$
+
+$R(t)R(t)^t = I$이므로 다음과 같은 식을 유도 할 수 있습니다.
+
+$$
+\frac{d}{dt}(RR^T) = \dot{R}R^T = R\dot{R}^T = 0 \;\;\; \Rightarrow \;\;\; \dot{R}R^T = -(\dot{R}R^T)^T   
+$$
+
+따라서 $\dot{R}R^T$는 skew-symmetric matrix이며 다음과 같이 $\hat{}$ operator와 어떤 vector $w(t) \in R^3$을 이용하여 다음과 같이 나타낼 수 있습니다.
+
+$$
+\dot{R}(t)R^t(t) = \hat{w}(t) \;\;\; \Leftrightarrow \dot{R}(t) = \hat{w}R(t)
+$$
+
+이때 $R(0) = I$이므로 $\dot{R}(0) = \hat(w)(0)$이며, 이러한 skew-symmetric matrix $\hat{w}(0) \in so(3)$으로 부터 rotation의 first order approximation을 다음과 같이 찾을 수 있습니다.
+
+$$
+R(dt) = R(0) + dR = I + \hat{w}(0)dt
+$$
 
 
 ## Lie Group and Lie Algebra

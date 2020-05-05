@@ -127,8 +127,42 @@ $$
 R(dt) = R(0) + dR = I + \hat{w}(0)dt
 $$
 
-
 ## Lie Group and Lie Algebra
+
+위에서 infintesimal roation $R \in SO(3)$은 어떤 skew-symmetric matrix $so(3) = {\hat{w} \mid w \in R^3}$ 에 의해 근사될 수 있음을 보였고, 이러한 rotation group SO(3)는 Lie group, so(3)는 Lie algebra라고 합니다.
+
+Lie algebra에서 사용되는 연산 중 하나인 Lie bracket은 다음과 같습니다.
+
+$$
+\lbrack ., . \rbrack \; : \; so(3) \times so(3) \; \rightarrow \; so(3) \;\;\;\;\;\; \lbrack \hat{w}, \hat{v} \rbrack \equiv \hat{w}\hat{v} - \hat{v}\hat{w}
+$$
+
+skew symmetric matrix $\hat{w}$로 나타난 infinitesimal formulation은 다음과 같이 differential equation system으로 생각 할 수 있습니다.
+
+$$
+\begin{cases}
+\dot{R}(t) & = \hat{w} R(t)\\ 
+\dot{R}(0) & = I  
+\end{cases}
+$$
+
+위의 differential equation system의 해는 다음과 같습니다.
+
+$$
+R(t) = e^{\hat{w}t} = \sum_{n=0}^{\infty}{\frac{(\hat{w}t)^t}{n!}} = I + \hat{w}t + \frac{(\hat{w}t)^2}{2!} + \cdots
+$$
+
+이는 $\mid w \mid = 1$일 경우 $w \in R^3$을 축으로 하는 t만큼의 회전을 의미하며, 이때 t는 scalar이므로 $\hat{v} = \hat{w} t$와 같이 하나의 vector로 표현될 수 있습니다.
+
+이러한 matrix exponetial을 통해 다음과 같은 Lie algebra와 Lie group사이의 mapping을 표현 할 수 있습니다.
+
+$$
+exp : so(3) \rightarrow SO(3) \;\;\; \hat{w} e^{\hat{w}}
+$$
+
+
+
+
 
 ## Rodrigues’ Formula
 

@@ -353,6 +353,13 @@ $$
 
 ## Rules of Velocity Transformation
 
+위의 내용을 이용하여 frame t에서의 point $X_0$의 속도를 다음과 같이 twist coordinate와 함께 나타낼 수 있습니다.
+
+$$
+\dot{X}(t) = \dot{g}(t)X_0 = \dot{g}(t)g^{-1}(t)X(t) = \hat{V}(t)X(t)
+$$
+
+따라서 $\hat{V}(t)$는 camera frame에서 보이는 world frame의 relative velocity라고 할 수  
 
 
 ## Transfer Between Frames: The Adjoint Map

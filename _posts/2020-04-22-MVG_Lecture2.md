@@ -385,12 +385,27 @@ $$
 
 ## Alternative Representations: Euler Angles
 
+이제까지 나왔던 exponential parameterization에 더불어 rotation matrix를 parameterize하는 또다른 방법으로 Euler angle이 있습니다.
 
+Lie algebra so(3)로 주어진 basis $(\hat{w}_1, \hat{w}_2, \hat{w}_3)$에 대해 다음과 같이 $R^3$에서 Lie group SO(3)로의 mapping을 정의할 수 있습니다.
 
+$$
+\alpha : (\alpha_1, \alpha_2, \alpha_3) \;\;\; \rightarrow \;\;\; exp(\alpha_1\hat{w}_1 + \alpha_2\hat{w}_2 + \alpha_3\hat{w}_3)
+$$
 
+이때 coordinate $(\alpha_1, \alpha_2, \alpha_3)$를 Lie-Cartan coordinates of the first kind라고 합니다.
 
+Lie-Cartan coordinates of the second kind는 다음과 같습니다.
 
+$$
+\beta : (\beta_1, \beta_2, \beta_3) \;\;\; \rightarrow \;\;\; exp(\beta_1\hat{w}_1) exp(\beta_2\hat{w}_2) exp(\beta_3\hat{w}_3)
+$$
 
+이는 각 $\hat{w}_i$에 대해 $\beta_i$만큼씩의 회전은 3번 연속한 것을 의미하며, 각 basis가 z-, y-, x-axis로 나타날 경우, 즉 다음과 같이 w가 설정되었을 경우에 $\beta_1, \beta_2, \beta_3$을 Euler angles라고 합니다.
+
+$$
+w_1 = (0,0,1)^T, w_2 = (0,1,0)^T, w_3 = (1,0,0)^T
+$$
 
 
 

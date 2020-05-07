@@ -359,10 +359,29 @@ $$
 \dot{X}(t) = \dot{g}(t)X_0 = \dot{g}(t)g^{-1}(t)X(t) = \hat{V}(t)X(t)
 $$
 
-따라서 $\hat{V}(t)$는 camera frame에서 보이는 world frame의 relative velocity라고 할 수  
+따라서 $\hat{V}(t)$는 camera frame에서 보이는 world frame의 relative velocity라고 할 수 있습니다.
 
 
 ## Transfer Between Frames: The Adjoint Map
+
+만약 $g_{xy}: \; Y = g_{xy}X(t)$와 같은 transformation으로 관측자가 다른 frame A로 변환된다면, 새로운 frame에서의 point의 속도는 다음과 계산될 수 있습니다.
+
+$$
+\dot{Y}(t) = g_{xy}\dot{X}(t) = g_{xy}\hat{V}X(t) = g_{xy}\hat{V}g^{-1}_{xy}Y(t)
+$$
+
+즉 camera frame A에서 관측된 point의 relative velocity는 다음과 같이 twist로 표현될 수 있습니다.
+
+$$
+\hat{V}_y = g_{xy}\hat{V}g^{-1}_{xy} = \equiv ad_{g_{xy}}(\hat{V})
+$$
+
+또한 여기서 나타난 adjoint map on se(3)는 다음과 같이 정의됩니다.
+
+$$
+ad_g : se(3) \rightarrow se(3) \;\;\;\;\;\; \hat{\xi} \rightarrow g\hat{\xi}g^{-1}
+$$
+
 
 ## Alternative Representations: Euler Angles
 

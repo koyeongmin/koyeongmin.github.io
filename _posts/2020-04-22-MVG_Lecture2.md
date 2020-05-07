@@ -129,7 +129,7 @@ $$
 
 ## Lie Group and Lie Algebra
 
-위에서 infintesimal roation $R \in SO(3)$은 어떤 skew-symmetric matrix $so(3) = {\hat{w} \mid w \in R^3}$ 에 의해 근사될 수 있음을 보였고, 이러한 rotation group SO(3)는 Lie group, so(3)는 Lie algebra라고 하며, Lie algebra는 rotation group SO(3)의 identity에서의 tangent space
+위에서 infintesimal roation $R \in SO(3)$은 어떤 skew-symmetric matrix $so(3) = {\hat{w} \mid w \in R^3}$ 에 의해 근사될 수 있음을 보였고, 이러한 rotation group SO(3)는 Lie group, so(3)는 Lie algebra라고 하며, Lie algebra는 rotation group SO(3)의 identity에서의 tangent space 
 
 Lie algebra에서 사용되는 연산 중 하나인 Lie bracket은 다음과 같습니다.
 
@@ -149,7 +149,7 @@ $$
 위의 differential equation system의 해는 다음과 같습니다.
 
 $$
-R(t) = e^{\hat{w}t} = \sum_{n=0}^{\infty}{\frac{(\hat{w}t)^t}{n!}} = I + \hat{w}t + \frac{(\hat{w}t)^2}{2!} + \cdots
+R(t) = e^{\hat{w}t} = \sum_{n=0}^{\infty}{\frac{(\hat{w}t)^n}{n!}} = I + \hat{w}t + \frac{(\hat{w}t)^2}{2!} + \cdots
 $$
 
 이는 $\mid w \mid = 1$일 경우 $w \in R^3$을 축으로 하는 t만큼의 회전을 의미하며, 이때 t는 scalar이므로 $\hat{v} = \hat{w} t$와 같이 하나의 vector로 표현될 수 있습니다.
@@ -180,7 +180,7 @@ $R=I$일 경우 $\mid w \mid = 0$이며, 위의 식으로 부터 rotation R은 $
 
 ## Rodrigues’ Formula
 
-$e^{i\phi} = \cos(\phi) + i \sin(\phi), \;\;\;\;\;\; \forall \phi \in R $와 같은 Euler equation은 exponential을 삼각함수로 표현해줍니다.
+$e^{i\phi} = \cos(\phi) + i \sin(\phi), \;\; \forall \phi \in R $와 같은 Euler equation은 exponential을 삼각함수로 표현해줍니다.
 
 Skew-symmetric matrix의 경우에도 다음과 같은 표현식이 있으며, 이를 Rodrigues' formula라고 합니다.
 
@@ -277,13 +277,83 @@ w
 \end{pmatrix} \in R^{6}
 $$
 
-
-
 ## Exponential Coordinates for SE(3)
+
+위의 twist coordinate $\xi = \begin{pmatrix}
+v\\ 
+w
+\end{pmatrix}$는 linear velocity $v \in R^3$과 angular velocity $w \in R^3$을 쌓은 형태이며, 이를 이용하여 다음과 같은 differential equation system을 얻을 수 있습니다.
+
+$$
+\begin{cases}
+\dot{g}(t) & = \hat{\xi} g(t), \;\;\; \hat{\xi} = const.\\ 
+\dot{g}(0) & = I  
+\end{cases}
+$$
+
+위의 system의 해는 다음과 같습니다.
+
+$$
+g(t) = e^{\hat{\xi}t} = \sum_{n=0}^{\infty}{\frac{(\hat{\xi}t)^n}{n!}}
+$$
+
+따라서 $w=0$일 때는 $e^{\hat{\xi}} = 
+\begin{pmatrix}
+I & v\\ 
+0 & 1
+\end{pmatrix}$이고, $w \ne 0$일 경우 다음과 같습니다.
+
+$$
+e^{\hat{\xi}} =
+\begin{pmatrix}
+e^{\hat{w}} & \frac{(I-e^{\hat{w}})\hat{w} v + w w^T v}{\mid w \mid^2}\\ 
+0 & 1
+\end{pmatrix}
+$$
+
+이러한 사실에서 exponential map이 Lie algebra se(3)에서 Lie group SE(3)로의 transformation을 정의함을 알 수 있으며, 이때 $\hat{\xi}$를 SE(3)의 exponential coordinates라고 합니다.
+
+$$
+exp : \; se(3) \;\; \rightarrow \;\; SE(3) \;\;\;\;\;\; \hat{\xi} \rightarrow e^{\hat{\xi}}
+$$
+
+이때 주어진 $g \in SE(3)$에 대해 $g \in exp{\xi}$를 만족하는 $\xi = (v, w)$를 언제나 찾을 수 있습니다.
+
 
 ## Representing the Motion of the Camera
 
+움직이는 카메라에서 어떤 장면을 관찰할 때, 어떤 point의 coordinate나 속도 등은 카메라를 따라 변화하게 됩니다.
+
+이러한 변환은 위에서 나온 rigid-body transformation에 의해 처리 될 수 있습니다.
+
+고정된 world frame과 camera frame이 존재하며, 처음에는 두 frame이 일치한다고 가정하면 (g(0) = I) world 좌표의 어떤 point $X_0$를 time t의 camera frame에서는 다음과 같이 관측됩니다.
+
+$$
+X(t) = R(t)X_0 + T(t)
+$$
+
+Homogeneous 표현에서는 다음과 같습니다.
+
+$$
+X(t) = g(t)X_0
+$$
+
+Frame $t_1$에서 $t_2$로의 transformation을 $g(t_2, t_1)$라고 하면 다음이 성립합니다.
+
+$$
+g(t_3, t_2)g(t_2, t_1) = g(t_3, t_1)
+$$
+
+또한 이로부터 다음을 유추할 수 있습니다.
+
+$$
+g(t_1, t_2)g(t_2, t_1) = g(t_1, t_1) = I \;\;\;\;\;\; g^{-1}(t_2, t_1) = g(t_1, t_2)
+$$
+
+
 ## Rules of Velocity Transformation
+
+
 
 ## Transfer Between Frames: The Adjoint Map
 

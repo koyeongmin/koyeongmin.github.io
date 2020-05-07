@@ -373,7 +373,7 @@ $$
 즉 camera frame A에서 관측된 point의 relative velocity는 다음과 같이 twist로 표현될 수 있습니다.
 
 $$
-\hat{V}_y = g_{xy}\hat{V}g^{-1}_{xy} = \equiv ad_{g_{xy}}(\hat{V})
+\hat{V}_y = g_{xy}\hat{V}g^{-1}_{xy} \equiv ad_{g_{xy}}(\hat{V})
 $$
 
 또한 여기서 나타난 adjoint map on se(3)는 다음과 같이 정의됩니다.

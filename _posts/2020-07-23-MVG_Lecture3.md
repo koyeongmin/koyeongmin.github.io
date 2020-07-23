@@ -62,19 +62,19 @@ X \\
 Y \\
 Z \\
 1
-\end{pmatrix} = K_f \PI_0 \textbf{X}
+\end{pmatrix} = K_f \Pi_0 \textbf{X}
 $$
 
-이때, $\textbf{x}$는 image의 좌표, $\textbf{X}$는 point의 좌표이며 $K_f, \PI_0$는 다음과 같습니다.
+이때, $\textbf{x}$는 image의 좌표, $\textbf{X}$는 point의 좌표이며 $K_f, \Pi_0$는 다음과 같습니다.
 
 $$
-K_f \eqiv 
+K_f \equiv 
 \begin{pmatrix}
 f & 0 & 0 \\ 
 0 & f & 0 \\
 0 & 0 & 1 
 \end{pmatrix} \;\;\;\;\;\;
-\PI_0 \eqiv 
+\Pi_0 \equiv 
 \begin{pmatrix}
 1 & 0 & 0 & 0 \\ 
 0 & 1 & 0 & 0 \\
@@ -82,10 +82,39 @@ f & 0 & 0 \\
 \end{pmatrix}
 $$
 
-여기서 matrix $\PI_0$는 standard projection matrix라고 하며, $Z$가 0 이상의 상수, $\lambda$라고 하면 다음과 같습니다.
+여기서 matrix $\Pi_0$는 standard projection matrix라고 하며, $Z$가 0 이상의 상수, $\lambda$라고 하면 다음과 같습니다.
 
 $$
-\lambda \textbf{x} = K_f \PI_0 \textbf{X}
+\lambda \textbf{x} = K_f \Pi_0 \textbf{X}
+$$
+
+이전에 나왔던 camera의 rigid motion을 통해 다음과 같이 world 좌표계의 point $\textbf{X_0}$에서 camera 좌표계의 point $\textbf{X}$를 얻을 수 있습니다.
+
+$$
+\textbf{X} = R \textbf{X_0} + T
+$$
+
+Homogeneous 좌표계 $\textbf{X} = (X, Y, Z, 1)^T$ 로 표현하는 경우에는 다음과 같습니다.
+
+$$
+\textbf{X} = g \textbf{X_0} =
+\begin{pmatrix}
+R & T \\ 
+0 & 1
+\end{pmatrix}
+\textbf{X_0}
+$$
+
+이들을 결합하면, 다음과 같이 world 좌표계에서 image 좌표계로의 transformation을 얻을 수 있습니다.
+
+$$
+\lambda \textbf{x} = K_f \Pi_0 g \textbf{X_0}
+$$
+
+또한 focal length $f$ 가 알려져 있어 이를 1로 normalize 할 수 있는 경우 다음과 같이 표현됩니다.
+
+$$
+\lambda \textbf{x} = \Pi_0 \textbf{X} = K_f \Pi_0 g \textbf{X_0}
 $$
 
 

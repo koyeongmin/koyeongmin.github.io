@@ -30,7 +30,7 @@ Multiple View Geometry 과목의 세번째 강의는 투영 기하학과 관련�
   <img src="https://raw.githubusercontent.com/koyeongmin/koyeongmin.github.io/master/_posts/MVG_lecture3_figure/2.png">
 </p>
 
-이를 이용하여 perspective transformation $\pi$를 다음과 같이 나타낼 수 있습니다.
+이를 이용하여 perspective transformation $\pi$를 다음과 같이 나타낼 수 있으며, 이는 위의 그림에서 point와 image 사이에 매칭되는 점에 대한 비례를 통해 유도될 수 있습니다.
 
 $$
 \pi : R^3 \rightarrow R^2 \;\;\;\;\;\; \textbf{X} \rightarrow x = \pi (\textbf{X}) = 
@@ -42,6 +42,51 @@ $$
 
 
 ## An Ideal Perspective Camera
+
+위의 perspective transformation은 homogeneous coordinate에서  다음과 같이 표현될 수 있습니다.
+
+$$
+Z \textbf{x} = Z 
+\begin{pmatrix}
+x \\ 
+y \\
+1
+\end{pmatrix} = 
+\begin{pmatrix}
+f & 0 & 0 & 0 \\ 
+0 & f & 0 & 0 \\
+0 & 0 & 1 & 0 
+\end{pmatrix}
+\begin{pmatrix}
+X \\ 
+Y \\
+Z \\
+1
+\end{pmatrix} = K_f \PI_0 \textbf{X}
+$$
+
+이때, $\textbf{x}$는 image의 좌표, $\textbf{X}$는 point의 좌표이며 $K_f, \PI_0$는 다음과 같습니다.
+
+$$
+K_f \eqiv 
+\begin{pmatrix}
+f & 0 & 0 \\ 
+0 & f & 0 \\
+0 & 0 & 1 
+\end{pmatrix} \;\;\;\;\;\;
+\PI_0 \eqiv 
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 
+\end{pmatrix}
+$$
+
+여기서 matrix $\PI_0$는 standard projection matrix라고 하며, $Z$가 0 이상의 상수, $\lambda$라고 하면 다음과 같습니다.
+
+$$
+\lambda \textbf{x} = K_f \PI_0 \textbf{X}
+$$
 
 
 ## Intrinsic Camera Parameters

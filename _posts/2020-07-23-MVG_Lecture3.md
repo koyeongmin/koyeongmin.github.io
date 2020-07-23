@@ -1,5 +1,5 @@
 ---
-title: Multiple View Geometry - Lecture 2 정리
+title: Multiple View Geometry - Lecture 3 정리
 use_math: true
 tags: MVG
 ---
@@ -12,3 +12,5 @@ Multiple View Geometry 과목의 세번째 강의는 투영 기하학과 관련�
 [Video](https://www.youtube.com/watch?v=H6WEt3xOyPU)
 
 [강의자료](https://drive.google.com/file/d/19vI3xbLeXcQuJz15UtwHp-YNsT5gZxEm/view?usp=sharing)
+
+

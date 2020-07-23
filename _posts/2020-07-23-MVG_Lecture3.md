@@ -16,7 +16,7 @@ Multiple View Geometry 과목의 세번째 강의는 투영 기하학과 관련�
 
 ## Mathematics of Perspective Projection
 
-![notation](https://github.com/koyeongmin/koyeongmin.github.io/blob/master/_posts/MVG_lecture3_figure/1.png)
+!![notation](https://github.com/koyeongmin/koyeongmin.github.io/blob/master/_posts/MVG_lecture3_figure/1.png)
 
 
 ## An Ideal Perspective Camera

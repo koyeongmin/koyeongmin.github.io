@@ -88,33 +88,33 @@ $$
 \lambda \textbf{x} = K_f \Pi_0 \textbf{X}
 $$
 
-이전에 나왔던 camera의 rigid motion을 통해 다음과 같이 world 좌표계의 point $\textbf{X_0}$에서 camera 좌표계의 point $\textbf{X}$를 얻을 수 있습니다.
+이전에 나왔던 camera의 rigid motion을 통해 다음과 같이 world 좌표계의 point $\textbf{X}_0$에서 camera 좌표계의 point $\textbf{X}$를 얻을 수 있습니다.
 
 $$
-\textbf{X} = R \textbf{X_0} + T
+\textbf{X} = R \textbf{X}_0 + T
 $$
 
 Homogeneous 좌표계 $\textbf{X} = (X, Y, Z, 1)^T$ 로 표현하는 경우에는 다음과 같습니다.
 
 $$
-\textbf{X} = g \textbf{X_0} =
+\textbf{X} = g \textbf{X}_0 =
 \begin{pmatrix}
 R & T \\ 
 0 & 1
 \end{pmatrix}
-\textbf{X_0}
+\textbf{X}_0
 $$
 
 이들을 결합하면, 다음과 같이 world 좌표계에서 image 좌표계로의 transformation을 얻을 수 있습니다.
 
 $$
-\lambda \textbf{x} = K_f \Pi_0 g \textbf{X_0}
+\lambda \textbf{x} = K_f \Pi_0 g \textbf{X}_0
 $$
 
 또한 focal length $f$ 가 알려져 있어 이를 1로 normalize 할 수 있는 경우 다음과 같이 표현됩니다.
 
 $$
-\lambda \textbf{x} = \Pi_0 \textbf{X} = K_f \Pi_0 g \textbf{X_0}
+\lambda \textbf{x} = \Pi_0 \textbf{X} = K_f \Pi_0 g \textbf{X}_0
 $$
 
 

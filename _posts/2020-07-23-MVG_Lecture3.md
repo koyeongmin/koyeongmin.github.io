@@ -221,7 +221,7 @@ $$
 
 Perspective transformation은 임의의 geometric entity에 대해 image를 정의할 수 있는 방법을 제시하고 있습니다.
 
-하지만 알 수 없는 scale factor로 인해 각 point는 단일 지점 $\textbf{x}$에 mapping 되는 것이 아니라 equivalence class of points $\textbf{y} ~ \textbf{x}$에 mapping 됩니다.
+하지만 알 수 없는 scale factor로 인해 각 point는 단일 지점 $\textbf{x}$에 mapping 되는 것이 아니라 equivalence class of points $\textbf{y} \sim \textbf{x}$에 mapping 됩니다.
 
 이러한 현상은 직선이 어떻게 변환되는 지를 살펴봄으로써 관찰할 수 있습니다.
 
@@ -234,8 +234,10 @@ $$
 이 line L의 image는 다음과 같이 주어집니다.
 
 $$
-\textbf{x} ~ \Pi_0 \textbf{X} = \Pi_0(\textbf{X}_0 + \mu \textbf{V}) = \Pi_0 \textbf{X}_0 + \mu \Pi_0 \textbf{V} 
+\textbf{x} \sim \Pi_0 \textbf{X} = \Pi_0(\textbf{X}_0 + \mu \textbf{V}) = \Pi_0 \textbf{X}_0 + \mu \Pi_0 \textbf{V} 
 $$
+
+이때 나타나는 equivalent는 두 coordinate vector $\textbf{X}, \textbf{Y}$가 서로 scalar factor 차이만 날 때 서로를 equivalent
 
 Origin o로 부터 vector로 표현되는 모든 $\textbf{x}$는 2D subspace P를 span하며, 이 plane P을 직선의 preimage라고 하며, preimage와 image plane이 교차되는 부분이 바로 주어진 line의 image입니다.
 
@@ -247,10 +249,10 @@ Origin o로 부터 vector로 표현되는 모든 $\textbf{x}$는 2D subspace P�
 
 그리고 image, preimage, coimage는 다음과 같이 서로를 unique하게 결정하여 서로 equivalent합니다.
 
-- image = preimage $\cap$ image plane
-- preimage = span(image)
-- preimage = coimage^{\perp}
-- coimage = preimage^{\perp}
+- image = $preimage \cap image plane$
+- preimage = $span(image)$
+- preimage = $coimage^{\perp}$
+- coimage = $preimage^{\perp}$
 
 Preimage의 모든 points, 즉 image의 모든 points $\textbf{x}$는 coimage를 span하는 normal vector $l \in R^3$에 수직입니다.
 
@@ -271,7 +273,6 @@ Point p의 image $\textbf{x}$의 경우 preimge가 line이고, coimage는 $\text
 | Point | $span(\textbf{x}) \cap im.plane$  | $span(\textbf{x}) \subset R^3$ | $span(\hat{\textbf{x}}) \subset R^3$ |
 | Line | $span(\hat{l}) \cap im.plane$ | $span(\hat{l}) \subset R^3$ | $span(l) \subset R^3$ |
 
-## Projective Geometry
 
 
 

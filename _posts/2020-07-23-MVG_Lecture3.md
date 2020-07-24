@@ -219,6 +219,61 @@ $$
 
 ## Preimage of Points and Lines
 
+Perspective transformation은 임의의 geometric entity에 대해 image를 정의할 수 있는 방법을 제시하고 있습니다.
+
+하지만 알 수 없는 scale factor로 인해 각 point는 단일 지점 $\textbf{x}$에 mapping 되는 것이 아니라 equivalence class of points $\textbf{y} ~ \textbf{x}$에 mapping 됩니다.
+
+이러한 현상은 직선이 어떻게 변환되는 지를 살펴봄으로써 관찰할 수 있습니다.
+
+3D 상에서의 직선 L은 base point $\textbf{X}_0 = (X_0, Y_0, Z_0, 1)^T$와 vector $\textbf{V} = (V_1, V_2, V_3, 0)$을 이용하여 다음과 같이 나타낼 수 있습니다.
+
+$$
+\textbf{X} = \textbf{X}_0 + \mu \textbf{V} \;\;\; \mu \in R
+$$
+
+이 line L의 image는 다음과 같이 주어집니다.
+
+$$
+\textbf{x} ~ \Pi_0 \textbf{X} = \Pi_0(\textbf{X}_0 + \mu \textbf{V}) = \Pi_0 \textbf{X}_0 + \mu \Pi_0 \textbf{V} 
+$$
+
+Origin o로 부터 vector로 표현되는 모든 $\textbf{x}$는 2D subspace P를 span하며, 이 plane P을 직선의 preimage라고 하며, preimage와 image plane이 교차되는 부분이 바로 주어진 line의 image입니다.
+
+곡선이나 복잡한 모양에 대해서도 preimage는 정의되지만, 점 또는 직선에 대한 preimage는 $R^3$의 subspace입니다.
+
+이러한 subspace는 orthogonal complement를 통해 표현될 수 있으며, preimage가 plane일 경우에는 normal vector로 나타납니다.
+
+이렇게 나타나는 complement를 coimage라고하며, 점 또는 직선의 coimage는 $R^3$의 subspace이고, 그것의 preimage의 유일한 orthgonal complement입니다.
+
+그리고 image, preimage, coimage는 다음과 같이 서로를 unique하게 결정하여 서로 equivalent합니다.
+
+- image = preimage $\cap$ image plane
+- preimage = span(image)
+- preimage = coimage^{\perp}
+- coimage = preimage^{\perp}
+
+Preimage의 모든 points, 즉 image의 모든 points $\textbf{x}$는 coimage를 span하는 normal vector $l \in R^3$에 수직입니다.
+
+$$
+l^T \textbf{x} = 0
+$$
+
+그리고 $l$에 수직인 모든 vector들의 space는 $\hat{l}$의 row vector들에 의해 span됩니다.
+
+$$
+P = span(\hat{l})
+$$
+
+Point p의 image $\textbf{x}$의 경우 preimge가 line이고, coimage는 $\textbf{x}$에 수직인 plane이며, 이는 matrix $\hat{x}$에 의해 span됩니다.
+
+|  | Image | Preimage | Coimage |
+| Point |   |  |  |
+| Line |   |  |  |
 
 ## Projective Geometry
+
+
+
+
+
 

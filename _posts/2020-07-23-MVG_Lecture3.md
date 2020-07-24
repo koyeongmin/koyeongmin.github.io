@@ -192,12 +192,29 @@ $$
 여기서 $\pi^T_1, \;\; \pi^T_2, \;\; \pi^T_3 \in R^4$는 projection matrix $\Pi$의 3가지 row입니다.
 
 
-
-## Spherical Perspective Projection
-
-
-
 ## Radial Distortion
+
+Intrinsic parameter는 pixel coordinate로의 transformation에서 linear distortion을 나타낸다고 볼 수 있습니다.
+
+그러나 저사양의 카메라 또는 넓은 field of view를 가지고 있는 카메라의 경우 radial axis 방향에 대한 distortion이 발생할 수 있습니다.
+
+이러한 radial distortion을 모델링하는 간단한 식 중 하나는 다음과 같습니다.
+
+$$
+x = x_d (1 + a_1r^2 + a_2r^4) \;\;\;\;\;\; y = y_d (1 + a_1r^2 + a_2r^4)
+$$
+
+여기서 $\textbf{x}_d = (x_d, y_d)$는 distorted point이며, $r^2 = x^2_d + y^2_d$입니다.
+
+만약 calibration이 가능하다면 distortion parameter $a_1,a_2$를 알아낼 수 있습니다.
+
+Radial distortion에 대한 더욱 일반적인 모델은 다음과 같습니다.(Devernay and Faugeras 1995)
+
+$$
+\textbf{x} = c + f(r)(\textbf{x}_d-c) \;\;\;\;\;\; f(r) = 1 + a_1 r + a_2 r^2 + a_3 r^3 + a_4 r^4
+$$
+
+여기서 $r = \mid \textbf{x}_d -c \mid$는 distortion c 의 임의의 중심이며, distortion correction factor $f(r)$은 임의의 4-th order 
 
 
 ## Preimage of Points and Lines

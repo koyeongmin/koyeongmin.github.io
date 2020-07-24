@@ -158,6 +158,7 @@ $$ = K_s K_f \Pi_0 \textbf{X}
 
 $$
 K \equiv K_s K_f = 
+\begin{pmatrix}
 fs_x & fs_{\theta} & o_x \\ 
 0 & fs_y & o_y \\
 0 & 0 & 1 
@@ -193,6 +194,7 @@ $$
 
 
 ## Spherical Perspective Projection
+
 
 
 ## Radial Distortion

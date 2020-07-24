@@ -267,6 +267,7 @@ $$
 Point p의 image $\textbf{x}$의 경우 preimge가 line이고, coimage는 $\textbf{x}$에 수직인 plane이며, 이는 matrix $\hat{x}$에 의해 span됩니다.
 
 |  | Image | Preimage | Coimage |
+| --- |  --- | --- |
 | Point |   |  |  |
 | Line |   |  |  |
 

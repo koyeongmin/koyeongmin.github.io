@@ -111,7 +111,7 @@ $$
 \lambda \textbf{x} = K_f \Pi_0 g \textbf{X}_0
 $$
 
-또한 focal length $f$ 가 알려져 있어 이를 1로 normalize 할 수 있는 경우 다음과 같이 표현됩니다.
+또한 focal length $f$ 가 알려져 있어 이를 1로 normalize(image 좌표계의 unit을 바꿈으로써 normalize 할 수 있음) 할 수 있는 경우 다음과 같이 표현됩니다.
 
 $$
 \lambda \textbf{x} = \Pi_0 \textbf{X} = K_f \Pi_0 g \textbf{X}_0
@@ -119,6 +119,77 @@ $$
 
 
 ## Intrinsic Camera Parameters
+
+만약 카메라의 중심이 optical center와 일치하지 않거나, pixel 좌표가 unit scale이 아니거나, 또는 pixel이 정사각형이 아닐 경우 이를 처리하기 위한 transformation parameter가 더 필요합니다.
+
+이를 고려하여 pixel 좌표 $(x', y', 1)$을 homogeneous camera coordinate $\textbf{X}$의 함수로 나타내면 다음과 같습니다.
+
+$$
+\lambda 
+\begin{pmatrix}
+x' \\ 
+y' \\
+1
+\end{pmatrix} = 
+\begin{pmatrix}
+s_x & s_{\theta} & o_x \\ 
+0 & s_y & o_y \\
+0 & 0 & 1 
+\end{pmatrix}
+\begin{pmatrix}
+f & 0 & 0 \\ 
+0 & f & 0 \\
+0 & 0 & 1 
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 
+\end{pmatrix}
+\begin{pmatrix}
+X \\ 
+Y \\
+Z  \\
+1
+\end{pmatrix}
+$$ = K_s K_f \Pi_0 \textbf{X}
+
+이때, $K_s$가 위에서 설명한 추가적인 transformation이며, perspective projection $\Pi_0$ 이후에 적용되는 transformation인 $K = K_s K_f$를 intrinsic parameter matrix라고 하며, 다음과 같이 정리할 수 있습니다.
+
+$$
+K \equiv K_s K_f = 
+fs_x & fs_{\theta} & o_x \\ 
+0 & fs_y & o_y \\
+0 & 0 & 1 
+\end{pmatrix}
+$$
+
+위에 표기된 각 기호의 의미는 다음과 같습니다.
+
+- $o_x$ : x-coordinate of principal point in pixels (카메라의 중심이 optical center와 일치하지 않을 때 필요한 parameter)
+- $o_x$ : y-coordinate of principal point in pixels (카메라의 중심이 optical center와 일치하지 않을 때 필요한 parameter)
+- $fs_x = \alpha_x$ : size of unit length in horizontal pixels (pixel 좌표가 unit scale이 아닐 때 필요한 parameter)
+- $fs_y = \alpha_y$ : size of unit length in vertical pixels (pixel 좌표가 unit scale이 아닐 때 필요한 parameter)
+- $\alpha_x / \alpha_y$ : aspect ratio $\sigma$
+- $fs_{\theta}$ : skew of the pixel, often close to zero (pixel이 정사각형이 아닐 경우 필요한 parameter)
+
+
+그리고 위의 식을 world coordinate $\textbf{X}_0$로 나타내면 다음과 같습니다.
+
+$$
+\lambda \textbf{x}' = K \Pi_0 \textbf{X} = K \Pi_0 g \textbf{X}_0 \equiv \Pi \textbf{X}_0
+$$
+
+여기서 $3 \times 4$ matrix $\Pi \equiv K \Pi_0 g = (KR, KT)$를 genreal projection matrix라고 합니다.
+
+그리고 아직 남아있는 scale parameter $\lambda$ 를 나누어 다음의 식을 얻을 수 있습니다.
+
+$$
+x' = \frac{\pi^T_1 \textbf{X}_0}{\pi^T_3 \textbf{X}_0} \;\;\;\;\;\; y' = \frac{\pi^T_2 \textbf{X}_0}{\pi^T_3 \textbf{X}_0}
+$$
+
+여기서 $\pi^T_1, \;\; \pi^T_2, \;\; \pi^T_3 \in R^4$는 projection matrix $\Pi$의 3가지 row입니다.
+
 
 
 ## Spherical Perspective Projection

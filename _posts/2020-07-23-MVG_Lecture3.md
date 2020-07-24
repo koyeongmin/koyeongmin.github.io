@@ -266,10 +266,10 @@ $$
 
 Point p의 image $\textbf{x}$의 경우 preimge가 line이고, coimage는 $\textbf{x}$에 수직인 plane이며, 이는 matrix $\hat{x}$에 의해 span됩니다.
 
-|  | Image | Preimage | Coimage |
-| --- |  --- | --- |
-| Point |   |  |  |
-| Line |   |  |  |
+| | Image | Preimage | Coimage |
+| --- |  --- | --- | --- |
+| Point | $span(\textbf{x}) \cap im.plane$  | $span(\textbf{x}) \subset R^3$ | $span(\hat{\textbf{x}}) \subset R^3$ |
+| Line | $span(\hat{l}) \cap im.plane$ | $span(\hat{l}) \subset R^3$ | $span(l) \subset R^3$ |
 
 ## Projective Geometry
 

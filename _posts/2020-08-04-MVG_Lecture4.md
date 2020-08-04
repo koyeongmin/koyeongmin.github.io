@@ -34,7 +34,7 @@ Multiple View Geometry 과목의 네번째 강의는 두 frame간 동일한 지�
 Small deformation의 경우 rigidly moving을 일반적으로 다음과 같이 표현할 수 있습니다.
 
 $$
-x_2 = h(x_1) = frac{1}{\lambda_2(\typebf{X}}(R\lambda_1(\typebf{X})x_1 + T)
+x_2 = h(x_1) = frac{1}{\lambda_2(\textbf{X}}(R\lambda_1(\textbf{X})x_1 + T)
 $$
 
 하지만 다음과 같이 몇몇 근사 방법이 존재합니다.
@@ -65,6 +65,23 @@ x & y & 1 & 0 & 0 & 0\\
 p_1 & p_2 & p_3 & p_4 & p_5 & p_6
 \end{pmatrix}^T
 $$
+
+Optic flow는 비디오에서 연속적인 두 frame에서 겉보기로 나타나는 2D motion field를 관측할 수 있도록 나타냅니다.
+
+이는 장면에 찍힌 물체의 운동과는 다릅니다.
+
+예를들어 물체가 카메라 축을 따라 움직일 경우 물체는 움직이고 있지만 영상 pixel만 보면 변화가 없으므로 겉보기에는 움직임이 보이지 않고, 따라서 optic flow가 발생하지 않습니다.
+
+또는 정지된 물체를 찍을 때 카메라가 회전하는 경우, 물체는 멈춰있지만 optic flow는 발생합니다.
+
+Lucas/Kanade 방법과 Horn/Schunck 방법은 optic flow의 가장 중요한 방법들이며 서로 상호보완적인 모습을 보입니다.
+
+Lucas/Kanade 방법은 sparse flow vectors를 생성하며 local neighborhood에서는 일정한 motion을 갖는다고 가정하고 문제를 해결합니다.
+
+Horn/Schunck 방법은 dense flow field를 생성하며 motion이 smooth하다는 가정을 가지고 있습니다.
+
+헤딩 강의는 두 방법 중 Lucas/Kanade에 대한 설명을 
+
 
 ## The Lucas-Kanade Method
 

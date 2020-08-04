@@ -1,5 +1,5 @@
 ---
-title: Multiple View Geometry - Lecture 3 정리
+title: Multiple View Geometry - Lecture 4 정리
 use_math: true
 tags: MVG
 ---

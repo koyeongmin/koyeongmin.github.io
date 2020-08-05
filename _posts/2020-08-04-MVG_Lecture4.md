@@ -80,10 +80,12 @@ Lucas/Kanade 방법은 sparse flow vectors를 생성하며 local neighborhood에
 
 Horn/Schunck 방법은 dense flow field를 생성하며 motion이 smooth하다는 가정을 가지고 있습니다.
 
-헤딩 강의는 두 방법 중 Lucas/Kanade에 대한 설명을 
+해당 강의는 두 방법 중 Lucas/Kanade에 대한 설명을 포함하고 있습니다.
 
 
 ## The Lucas-Kanade Method
+
+
 
 
 ## Feature Point Extraction

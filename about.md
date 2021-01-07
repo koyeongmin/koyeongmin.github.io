@@ -58,8 +58,10 @@ Reseach Area : Autonomous Driving, Computer Vision
 - Farzeen Munir, Shoaib Azam, Ahmad Muqeem Sheri, YeongMin Ko and Moongu Jeon, "Where Am I: Localization and 3D Maps for Autonomous Vehicles", 5th International Conference on Vehicle Technology and Intelligent Transportation Systems,  Crete, Greece, May 2-5, 2019.
 - Shoaib Azam, Farzeen Munir, Aasim Raﬁque, YeongMin Ko, Ahmad Muqeem Sheri and Moongu Jeon, "Object Modeling from 3D Point Cloud Data for Self-Driving Vehicles", 29th IEEE Intelligent Vehicles Symposium (IV) 2018, June 25-30, China
 
-### Domestric Paper(Korea)
+### Domestric Paper (Korea)
 
+- 고영민,  Khaula Qadeer, 윤용상, 전문구. "키포인트 기반 차선 인식 방법 ", 한국소프트웨어종합학술대회 Korea Software Congress 2020
+- Muhammad Ishfaq Hussain, Zafran Khan, Hamna Akram, 고영민, 전문구. "동시 지역화 및 매핑의 비교 분석(SLAM) ", 한국소프트웨어종합학술대회 Korea Software Congress 2020
 - 전지효, 이윤관, 이주현, 고영민, 전문구. "자기지도적 학습에 의한 단안 영상 깊이 추정", IPIU 2020, 제주, 2020.02.05-07
 - Farzeen Munir, Shoaib Azam, 고영민, 전지효, 전문구. "Motion Prediction and Obstacle Avoidance for Self-driving Car", 한국정보과학회 KSC, 2019
 - 유종민, 이상현, 고영민, 전문구, "얼굴 검증을 위한 Densely connected 된 검증 네트워크 " 한국정보과학회 KSC, 916-918, 2017

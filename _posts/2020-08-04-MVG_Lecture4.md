@@ -32,10 +32,7 @@ Multiple View Geometry 과목의 네번째 강의는 두 frame간 동일한 지�
 ## Small Deformation & Optical Flow
 
 Small deformation의 경우 rigidly moving을 일반적으로 다음과 같이 표현할 수 있습니다.
-
-\[
-x_2 = h(x_1) = frac{1}{\lambda_2(\textbf{X}}(R\lambda_1(\textbf{X})x_1 + T)
-\]
+\[ x_2 = h(x_1) = frac{1}{\lambda_2(\textbf{X}}(R\lambda_1(\textbf{X})x_1 + T) \]
 
 하지만 다음과 같이 몇몇 근사 방법이 존재합니다.
 
